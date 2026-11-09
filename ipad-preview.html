@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>תצוגת אייפד · Inside Story</title>
+<style>
+  :root { --bg: #E9E5DF; --ink: #26211C; --mute: #615A52; --cta: linear-gradient(120deg, #A9BDBE 0%, #6F8889 48%, #4B5F60 100%); }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--bg); color: var(--ink); font: 15px/1.4 system-ui, sans-serif; display: grid; grid-template-rows: auto 1fr; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 12px 18px; background: #fff; box-shadow: 0 1px 0 rgba(0,0,0,.08); }
+  .bar b { font-size: 16px; }
+  .bar label { display: flex; align-items: center; gap: 8px; color: var(--mute); }
+  select, button { font: inherit; padding: 7px 12px; border-radius: 999px; border: 1px solid rgba(38,33,28,.25); background: #fff; color: var(--ink); cursor: pointer; }
+  button.on { background: var(--cta); color: #fff; border-color: transparent; }
+  .stage { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 28px; padding: 18px; }
+  .dev { flex: none; display: grid; gap: 8px; justify-items: center; }
+  .dev small { color: var(--mute); }
+  .shell { position: relative; border-radius: 34px; background: #1E1E1E; padding: 18px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+  .screen { position: relative; overflow: hidden; border-radius: 16px; background: #fff; }
+  .screen iframe { position: absolute; top: 0; left: 0; border: 0; transform-origin: 0 0; }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <b>Inside Story · תצוגת אייפד</b>
+    <label>דגם
+      <select id="model">
+        <option value="820x1180" selected>iPad Air / iPad 10 (820×1180)</option>
+        <option value="768x1024">iPad mini / iPad 9 (768×1024)</option>
+        <option value="834x1194">iPad Pro 11" (834×1194)</option>
+        <option value="1024x1366">iPad Pro 12.9" (1024×1366)</option>
+      </select>
+    </label>
+    <span>
+      <button id="b-both" class="on">שני הכיוונים</button>
+      <button id="b-p">לאורך</button>
+      <button id="b-l">לרוחב</button>
+    </span>
+  </div>
+  <div class="stage" id="stage"></div>
+<script>
+  const stage = document.getElementById('stage'), model = document.getElementById('model');
+  let mode = 'both';
+  function build() {
+    const [w, h] = model.value.split('x').map(Number);
+    const sizes = mode === 'both' ? [[w, h, 'לאורך'], [h, w, 'לרוחב']] : mode === 'p' ? [[w, h, 'לאורך']] : [[h, w, 'לרוחב']];
+    stage.innerHTML = '';
+    const availW = stage.clientWidth - 36 - (sizes.length - 1) * 28 - sizes.length * 36, availH = stage.clientHeight - 36 - 36 - 30;
+    const totalW = sizes.reduce((a, s) => a + s[0], 0), maxH = Math.max(...sizes.map(s => s[1]));
+    const k = Math.min(1, availW / totalW, availH / maxH);
+    sizes.forEach(([sw, sh, name]) => {
+      const dev = document.createElement('div'); dev.className = 'dev';
+      dev.innerHTML = `<div class="shell"><div class="screen" style="width:${Math.round(sw * k)}px;height:${Math.round(sh * k)}px"><iframe src="index.html" title="${name}" style="width:${sw}px;height:${sh}px;transform:scale(${k})"></iframe></div></div><small>${name} · <bdi dir="ltr">${sw}×${sh}</bdi></small>`;
+      stage.append(dev);
+    });
+  }
+  model.addEventListener('change', build);
+  [['b-both', 'both'], ['b-p', 'p'], ['b-l', 'l']].forEach(([id, m]) => document.getElementById(id).addEventListener('click', e => { mode = m; document.querySelectorAll('.bar button').forEach(b => b.classList.toggle('on', b === e.currentTarget)); build(); }));
+  addEventListener('resize', build);
+  build();
+</script>
+</body>
+</html>
