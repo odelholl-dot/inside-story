@@ -1,0 +1,2009 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>שרה ישראלי | Inside Story · עיצוב ואדריכלות פנים</title>
+<meta name="description" content="שרה ישראלי, Inside Story: תכנון ועיצוב פנים שמתחילים בצרכים ובערכים של המשפחה שלכם. תוכניות ביצוע, ליווי בבחירת חומרים ופיקוח בשטח.">
+<link rel="icon" href="img/logo-mark.png">
+<style>
+/* AAA fonts only (skill: deep-cut-style) */
+@font-face { font-family: 'Gloria'; src: url('fonts/gloria-light-aaa.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Gloria'; src: url('fonts/gloria-regular-aaa.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Gloria'; src: url('fonts/gloria-demibold-aaa.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Gloria'; src: url('fonts/gloria-bold-aaa.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'OliviaDisplay'; src: url('fonts/olivia-display-light-aaa.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'OliviaDisplay'; src: url('fonts/olivia-display-regular-aaa.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'FrankRe'; src: url('fonts/frank-re-regular-aaa.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'FrankRe'; src: url('fonts/frank-re-medium-aaa.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Ploni'; src: url('fonts/ploni-light-aaa.woff2') format('woff2'); font-weight: 300; font-display: swap; }
+@font-face { font-family: 'Ploni'; src: url('fonts/ploni-regular-aaa.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Ploni'; src: url('fonts/ploni-demibold-aaa.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Ploni'; src: url('fonts/ploni-black-aaa.woff2') format('woff2'); font-weight: 900; font-display: swap; }
+
+/*
+  ART DIRECTION v3.1 — deep cut, light (after Sara's notes)
+  Mood: carved · light · clean.
+  Hero: the poster idea (objects inside a cut-out numeral) on light paper: a giant ש carved into ivory paper,
+        filled with photos like her favourite S, with her gold ribbon logo and a vase with a dry branch inside the cut.
+  Palette: ivory paper #F6F3EE · stone #D7D3CE · mist #D6DEDE · logo gold #C7A16C (metal) · ink #26211C.
+  CTA: rounded pill with a slate-mist gradient (a different colour from the gold).
+  Dark is kept only for the video wall and the footer.
+*/
+:root {
+  --paper: #F6F3EE; --white: #FFFFFF; --ivory: #FBF9F5; --stone: #D7D3CE; --stone-l: #E9E5DF; --mist: #D6DEDE; --mist-l: #E8EDED;
+  --noir: #1C1814; --noir-2: #251F1A;
+  --gold: #C7A16C; --gold-d: #8C6A42; --gold-l: #E2C9A0;
+  --metal: linear-gradient(135deg, #E9D1A6 0%, #C7A16C 40%, #9C7A4C 70%, #D9BC8C 100%);
+  --cta: linear-gradient(120deg, #A9BDBE 0%, #6F8889 48%, #4B5F60 100%);
+  --ink: #26211C; --mute: #615A52; --on-dark: #F1ECE4; --dim: rgba(241, 236, 228, .72);
+  --display: 'Gloria', 'Ploni', sans-serif; --font: 'Ploni', system-ui, sans-serif;
+  --gutter: clamp(20px, 4.6vw, 88px); --pad: clamp(22px, 2.2vw, 40px); --gap-in: clamp(10px, .8vw, 14px); --gap: clamp(28px, 3vw, 56px); --section: clamp(96px, 10vw, 170px);
+  --ease: cubic-bezier(.19, 1, .22, 1);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .25 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { scroll-padding-top: 90px; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 300 clamp(17px, 1.15vw, 19px)/1.75 var(--font); -webkit-font-smoothing: antialiased; }
+img, video, canvas, svg { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, figure, blockquote { margin: 0; }
+button { font: inherit; color: inherit; }
+.wrap { width: min(1320px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+.section { position: relative; padding-block: var(--section); isolation: isolate; overflow: clip; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+:focus-visible { outline: 1.5px solid var(--gold-d); outline-offset: 4px; }
+.ico { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ---------- type ---------- */
+.label { display: inline-flex; align-items: center; gap: 14px; font: 400 12px/1.2 var(--display); letter-spacing: .4em; text-transform: uppercase; color: var(--gold-d); }
+.label::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+.title { font: 300 clamp(38px, 4.4vw, 78px)/1.08 var(--display); letter-spacing: .01em; color: var(--ink); text-wrap: balance; }
+.title b { font-weight: 400; color: var(--gold-d); }
+.lead { color: var(--mute); max-width: 34em; }
+.head { margin-bottom: var(--gap); display: grid; gap: var(--gap-in); }
+.head.center { text-align: center; justify-items: center; }
+.head.split { grid-template-columns: 1.2fr 1fr; align-items: end; gap: var(--gap); }
+.head.split .lead { justify-self: end; }
+.rule { width: 120px; height: 1px; background: var(--metal); }
+
+/* ---------- buttons: rounded pills with a slate-mist gradient ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .9em; min-height: 56px; padding: 0 2.2em; border-radius: 999px; border: 1px solid transparent; font: 600 15px/1 var(--font); letter-spacing: .06em; text-decoration: none; cursor: pointer; white-space: nowrap; transition: box-shadow .35s, transform .35s var(--ease), background-position .6s; }
+.btn .arr { transition: translate .35s var(--ease); }
+.btn:hover .arr { translate: -6px 0; }
+.btn-cta { background: var(--cta); background-size: 140% 100%; background-position: 0 0; color: var(--lt); box-shadow: 0 12px 28px -12px rgba(43, 42, 41, .7); }
+.btn-cta:hover { background-position: 100% 0; box-shadow: 0 16px 34px -12px rgba(43, 42, 41, .85); transform: translateY(-2px); }
+.btn-line { border-color: rgba(43, 42, 41, .3); color: var(--ink); background: transparent; }
+.btn-line:hover { border-color: var(--ink); }
+.btn-sm { min-height: 42px; padding: 0 1.3em; gap: .5em; font-size: 14px; letter-spacing: .01em; }
+.tlink { display: inline-flex; align-items: center; gap: .7em; font: 600 14px/1 var(--font); letter-spacing: .06em; text-decoration: none; padding-bottom: 8px; background: linear-gradient(currentColor, currentColor) right bottom / 100% 1px no-repeat; transition: background-size .4s var(--ease); }
+.tlink:hover { background-size: 30% 1px; }
+
+/* ===== HEADER ===== */
+.header { position: fixed; inset-inline: 0; top: 0; z-index: 40; color: var(--ink); transition: background .45s, box-shadow .45s; }
+.header .wrap { display: flex; align-items: center; min-height: 86px; gap: 22px; }
+.header.scrolled { background: rgba(244, 239, 231, .95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 1px 0 rgba(43, 42, 41, .08); }
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo img { height: auto; } .logo .mark { width: 34px; } .logo .word { width: 140px; }
+.nav { display: flex; gap: 1.5rem; margin-inline-start: auto; }
+.nav > a { font: 400 13px/1 var(--display); letter-spacing: .03em; text-decoration: none; white-space: nowrap; position: relative; padding-block: 8px; }
+.nav > a::after { content: ""; position: absolute; inset-inline: 0; bottom: 0; height: 1px; background: var(--gold); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
+.nav > a:hover::after { transform: scaleX(1); }
+.burger { display: none; width: 44px; height: 44px; border: 0; background: none; padding: 10px 6px; cursor: pointer; color: inherit; position: relative; z-index: 2; }
+.burger span { display: block; height: 1.5px; background: currentColor; margin: 7px 0; transition: transform .3s, opacity .2s; }
+.mbar, .sheet-foot, .sheet-kicker { display: none; }
+
+/* ===== HERO: a ש carved into light paper, photos and objects inside (poster + S collage) ===== */
+.hero { position: relative; min-height: 100svh; padding: 104px var(--gutter) clamp(26px, 4vh, 44px); display: grid; grid-template-rows: auto 1fr auto; justify-items: center; text-align: center; overflow: clip; isolation: isolate;
+  background: var(--grain), radial-gradient(60% 55% at 50% 45%, #FFFFFF 0%, var(--paper) 62%, #ECE7DF 100%); }
+.hero-top { display: grid; gap: 10px; justify-items: center; }
+.hero-top .kick { font: 400 12px/1 var(--display); letter-spacing: .5em; color: var(--gold-d); }
+.hero h1 { font: 300 clamp(30px, 3vw, 52px)/1.1 var(--display); letter-spacing: .04em; }
+.hero h1 b { font-weight: 600; }
+.hero-top .sub { font: 400 13px/1.4 var(--display); letter-spacing: .3em; color: var(--mute); }
+.hero { grid-template-rows: auto 1fr auto auto; }
+.cutbox { position: relative; width: min(1240px, 90vw); aspect-ratio: 2800 / 800; align-self: center; margin-block: 10px; }
+.cutbox svg.letter { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+/* the film inside the words: Sara's projects and short clips play through the cut-out letters */
+.cutbox { will-change: transform; }
+.film-clip { position: absolute; inset: 0; clip-path: url(#hclipBB); background: var(--mist); }
+.hslide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.6s ease; overflow: clip; }
+.hslide.on { opacity: 1; z-index: 1; }
+.hslide img, .hslide video { width: 100%; height: 100%; object-fit: cover; animation: kb 11s ease-in-out infinite alternate; }
+.hslide:nth-child(2n) img, .hslide:nth-child(2n) video { animation-name: kb2; }
+@keyframes kb { from { transform: scale(1.22) translate(3%, 2%); } to { transform: scale(1.04) translate(-3%, -2%); } }
+@keyframes kb2 { from { transform: scale(1.04) translate(-3%, 1%); } to { transform: scale(1.2) translate(3%, -2%); } }
+.cutbox svg.carve-ov { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; z-index: 2; }
+.cut-lines { display: flex; justify-content: center; gap: 26px; margin: 4px 0 26px; font: 400 14px/1 var(--display); letter-spacing: .34em; color: var(--mute); }
+.cut-lines span + span::before { content: "·"; margin-inline-end: 26px; color: var(--gold); }
+.hero-foot { display: flex; align-items: center; justify-content: center; gap: 28px; flex-wrap: wrap; }
+.hero-foot .tel { font: 400 15px/1 var(--display); letter-spacing: .14em; color: var(--mute); text-decoration: none; direction: ltr; }
+
+/* ===== SERVICES: carved photo numerals ===== */
+.services { background: var(--ivory); }
+/* a list of services beside one big picture that changes as you hover or scroll */
+.svc { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(30px, 5vw, 90px); align-items: start; }
+.svc-list { display: grid; }
+.srow { display: grid; grid-template-columns: clamp(90px, 9vw, 140px) 1fr; gap: clamp(18px, 2vw, 34px); align-items: start; padding: clamp(26px, 3vw, 44px) 0; border-top: 1px solid rgba(43, 42, 41, .14); cursor: pointer; transition: opacity .5s; }
+.srow:last-child { border-bottom: 1px solid rgba(43, 42, 41, .14); }
+.svc-list:hover .srow:not(.on), .svc-list.focus .srow:not(.on) { opacity: .42; }
+.snum { width: 100%; height: auto; overflow: visible; }
+.sbody { display: grid; gap: var(--gap-in); }
+.srow h3 { font: 600 clamp(24px, 2.2vw, 38px)/1.15 var(--display); letter-spacing: .01em; }
+.srow p { color: var(--mute); font-size: 17px; line-height: 1.6; max-width: 30em; }
+.inc { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.inc li { padding: 7px 14px; border-radius: 999px; background: var(--mist-l); font: 600 13px/1 var(--font); color: var(--ink); }
+.srow .tlink { justify-self: start; color: var(--gold-d); margin-top: 4px; }
+.m-img { display: none; }
+.svc-media { position: sticky; top: 120px; aspect-ratio: 4 / 4.6; border-radius: 26px; overflow: clip; background: var(--stone); box-shadow: 0 40px 70px -40px rgba(43, 42, 41, .5); }
+/* slow, calm change of picture */
+.sm { position: absolute; inset: 0; margin: 0; clip-path: inset(0 0 0 100%); transition: clip-path 2s cubic-bezier(.65, 0, .35, 1); }
+.sm.on { clip-path: inset(0); z-index: 1; }
+.sm img { width: 100%; height: 100%; object-fit: cover; scale: 1.12; transition: scale 3.2s var(--ease); }
+.sm.on img { scale: 1; }
+.sm figcaption { position: absolute; bottom: 20px; inset-inline-start: 20px; padding: 10px 16px; border-radius: 999px; background: rgba(244, 239, 231, .92); font: 600 14px/1 var(--font); color: var(--ink); }
+
+/* ===== STORY: the S collage ===== */
+/* pinned while you read: the S changes its frames, the words light up one by one */
+.story { position: relative; height: 330vh; background: var(--stone-l); isolation: isolate; }
+.story-pin { position: sticky; top: 0; height: 100vh; height: 100svh; display: grid; align-items: center; overflow: clip; padding-top: 70px; }
+.story .tri { position: absolute; z-index: -1; inset: auto -6% 0 auto; width: 46%; height: 78%; background: var(--mist); opacity: .55; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.story .wrap { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: var(--gap); }
+.mono { position: relative; width: 100%; max-width: min(520px, 62vh); justify-self: center; will-change: transform; }
+.mono svg { width: 100%; height: auto; filter: drop-shadow(0 30px 40px rgba(43, 42, 41, .18)); }
+.mono .fset { opacity: 0; transition: opacity 1.1s ease; }
+.mono .fset.on { opacity: 1; }
+.mono .fset image { transform-box: fill-box; transform-origin: center; transition: transform 2.4s var(--ease); transform: scale(1.12); }
+.mono .fset.on image { transform: scale(1); }
+.mono .cross { position: absolute; inset-inline: -8%; top: 52%; translate: 0 -50%; text-align: center; font: 300 clamp(14px, 1.3vw, 20px)/1 var(--display); letter-spacing: .9em; color: var(--ink); background: rgba(251, 249, 245, .9); padding: 16px 0 16px .9em; direction: ltr; white-space: nowrap; overflow: clip; }
+.mono .cross span { display: inline-block; will-change: transform; }
+.mono .fcount { position: absolute; bottom: -6px; inset-inline-start: 0; font: 600 13px/1 var(--font); letter-spacing: .14em; color: var(--mute); direction: ltr; }
+.story .quote { font: 300 clamp(34px, 3.4vw, 60px)/1.12 var(--display); }
+.story .quote b { font-weight: 400; color: var(--gold-d); }
+.story .st-sub { margin-top: 12px; font: 400 clamp(16px, 1.2vw, 19px)/1.6 var(--font); color: var(--mute); max-width: 30em; }
+.lead b { font-weight: 600; color: var(--ink); }
+.points { list-style: none; margin: clamp(18px, 3vh, 40px) 0 0; padding: 0; border-top: 1px solid rgba(43, 42, 41, .15); }
+.points li { position: relative; display: grid; grid-template-columns: 56px 1fr; gap: 14px; padding: clamp(12px, 1.8vh, 20px) 0; border-bottom: 1px solid rgba(43, 42, 41, .15); }
+.points li::after { content: ""; position: absolute; inset-inline-start: 0; bottom: -1px; height: 1px; width: 100%; background: var(--gold-d); transform: scaleX(var(--lp, 0)); transform-origin: right; }
+.points b { font: 400 13px/1.9 var(--display); letter-spacing: .2em; color: var(--mute); transition: color .5s; }
+.points li.cur b { color: var(--gold-d); }
+.points h3 { font: 600 clamp(18px, 1.3vw, 21px)/1.4 var(--font); letter-spacing: .02em; }
+.points p { font-size: clamp(16px, 1.15vw, 19px); color: var(--ink); line-height: 1.6; }
+/* words that light up as you scroll */
+.hw { opacity: var(--o, .2); transition: opacity .25s linear; }
+
+/* ===== PROCESS: film of clean cards ===== */
+/* pinned: you scroll down, the big cards glide sideways (the first one fills most of the frame) */
+.process { position: relative; background: var(--mist-l); }
+.proc-pin { position: sticky; top: 0; height: 100vh; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: clamp(16px, 2.6vh, 30px); padding-top: 86px; padding-bottom: clamp(18px, 3vh, 34px); overflow: clip; }
+.process .head { margin-bottom: 0; }
+.process .title { font-size: clamp(32px, 3.2vw, 56px); }
+.pview { position: relative; flex: 1; min-height: 0; max-height: 640px; }
+.ptrack { position: absolute; top: 0; bottom: 0; right: 0; width: max-content; display: flex; gap: clamp(16px, 2vw, 32px); padding-inline: max(var(--gutter), calc((100vw - 1320px) / 2)); will-change: transform; }
+.card { position: relative; flex: none; height: 100%; width: min(76vw, 1120px); display: grid; grid-template-columns: 1.45fr 1fr; gap: clamp(20px, 2.6vw, 44px); align-items: stretch; padding: clamp(12px, 1vw, 16px); background: var(--white); border-radius: 28px; box-shadow: 0 30px 60px -36px rgba(43, 42, 41, .4); transform-origin: center; will-change: transform; }
+.card .ph { border-radius: 18px; overflow: clip; position: relative; min-height: 0; }
+.card .txt { align-self: center; padding: 10px 6px 10px 20px; }
+.card img { -webkit-user-drag: none; user-select: none; }
+/* the first call: a phone with Sara on the line */
+.phone-ph { display: grid; place-items: center; background: linear-gradient(160deg, var(--mist-l), var(--stone-l)); }
+.dev-phone { height: 84%; max-height: 520px; aspect-ratio: 9 / 18.5; border-radius: 30px; padding: 6px; background: var(--dk); box-shadow: 0 24px 40px -18px rgba(0, 0, 0, .45); rotate: -5deg; }
+.dev-phone .scr { position: relative; height: 100%; border-radius: 24px; overflow: clip; background: var(--dk); color: var(--lt); display: flex; flex-direction: column; align-items: center; padding: 34px 10px 18px; text-align: center; }
+.dev-phone .scr::before { content: ""; position: absolute; top: 6px; left: 50%; translate: -50% 0; width: 34%; height: 14px; border-radius: 99px; background: #000; }
+.call-state { font: 400 10px/1 var(--display); letter-spacing: .26em; opacity: .8; margin-top: 8px; }
+.call-av { width: 40%; aspect-ratio: 1; border-radius: 50%; margin: 10px 0 8px; background: url('img/sara.jpg') 72% 22% / 260%; animation: ring 2s ease-out infinite; }
+@keyframes ring { 0% { box-shadow: 0 0 0 3px rgba(244, 239, 231, .5); } 100% { box-shadow: 0 0 0 14px rgba(244, 239, 231, 0); } }
+.call-name { font: 600 17px/1.2 var(--font); }
+.call-time { font: 400 13px/1 var(--font); opacity: .8; margin-top: 4px; direction: ltr; font-variant-numeric: tabular-nums; }
+.wave { display: flex; align-items: center; gap: 3px; height: 26px; margin-top: 8px; }
+.wave i { width: 2px; border-radius: 2px; background: var(--gold-l); height: 30%; animation: wave 1s ease-in-out infinite; }
+.wave i:nth-child(2n) { animation-delay: .15s; } .wave i:nth-child(3n) { animation-delay: .3s; } .wave i:nth-child(5n) { animation-delay: .45s; }
+@keyframes wave { 50% { height: 100%; } }
+.call-btns { margin-top: auto; display: flex; gap: 8px; }
+.call-btns span { width: 30px; height: 30px; border-radius: 50%; background: rgba(244, 239, 231, .16); }
+.call-btns span.end { background: rgba(244, 239, 231, .35); }
+/* the planning stage: half finished home, half drawing */
+.halfsketch img { position: absolute; inset: 0; }
+.halfsketch .sk { clip-path: inset(0 50% 0 0); filter: grayscale(1) contrast(2.4) brightness(1.5); }
+.halfsketch .grid { position: absolute; inset: 0; clip-path: inset(0 50% 0 0); background-image: linear-gradient(rgba(43, 42, 41, .2) 1px, transparent 1px), linear-gradient(90deg, rgba(43, 42, 41, .2) 1px, transparent 1px); background-size: 20px 20px; background-color: rgba(251, 250, 247, .5); mix-blend-mode: multiply; }
+.halfsketch .seam { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--lt); box-shadow: 0 0 10px rgba(0, 0, 0, .15); }
+.card .ph img, .card .ph video { width: 100%; height: 100%; object-fit: cover; display: block; }
+.card .txt { display: grid; gap: var(--gap-in); padding-inline-end: 8px; }
+/* ===== motion films in the process cards (built from Sara's own photos, played like short marketing clips) ===== */
+.mfilm { background: var(--dk); isolation: isolate; }
+.mfilm .sc { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; overflow: clip; }
+.mfilm .sc.on { opacity: 1; z-index: 1; }
+.mfilm .sc img, .mfilm .sc video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mfilm .sc::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: linear-gradient(180deg, rgba(43, 42, 41, .18) 0%, rgba(43, 42, 41, 0) 30%, rgba(43, 42, 41, 0) 52%, rgba(43, 42, 41, .6) 100%); }
+.mfilm .qstack, .mfilm .tcard, .mfilm .ftag, .mfilm .checks, .mfilm .chip, .mfilm .palette { position: absolute; z-index: 3; }
+.fwm { position: absolute; z-index: 3; top: 20px; left: 18px; font: 400 10.5px/1 var(--display); letter-spacing: .42em; color: rgba(244, 239, 231, .85); direction: ltr; }
+.fbar { position: absolute; z-index: 4; inset-inline: 0; bottom: 0; height: 3px; background: rgba(244, 239, 231, .22); }
+.fbar i { display: block; height: 100%; background: var(--lt); transform: scaleX(var(--fp, 0)); transform-origin: right; }
+.qstack { inset-inline-end: 18px; bottom: 26px; display: grid; gap: 8px; justify-items: end; }
+.qp, .checks span { padding: 10px 16px; border-radius: 999px; background: rgba(244, 239, 231, .94); color: var(--ink); font: 600 clamp(12.5px, 1vw, 15.5px)/1 var(--font); box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .5); }
+.tcard { inset-inline-start: 24px; bottom: 26px; display: grid; gap: 6px; color: var(--lt); text-shadow: 0 2px 18px rgba(0, 0, 0, .35); }
+.tcard small { font: 400 11px/1 var(--display); letter-spacing: .34em; opacity: .9; }
+.tcard b { font: 600 clamp(28px, 2.8vw, 46px)/1.05 var(--display); }
+.tcard span { font: 400 clamp(12.5px, .95vw, 15px)/1.4 var(--font); opacity: .92; }
+.ftag { top: 16px; inset-inline-start: 16px; padding: 9px 15px; border-radius: 999px; background: var(--cta); color: var(--lt); font: 600 12.5px/1 var(--font); letter-spacing: .05em; box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .5); }
+.checks { inset-inline-start: 18px; bottom: 24px; display: grid; gap: 8px; justify-items: start; }
+.checks span { display: flex; align-items: center; gap: 9px; border-radius: 12px; }
+.checks svg { width: 17px; height: 17px; fill: none; stroke: var(--gold-d); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.chip { inset-inline-start: 18px; bottom: 26px; display: flex; align-items: center; gap: 10px; padding: 7px 18px 7px 7px; border-radius: 999px; background: rgba(244, 239, 231, .95); color: var(--ink); font: 600 clamp(13px, 1vw, 16px)/1 var(--font); box-shadow: 0 10px 24px -12px rgba(0, 0, 0, .5); }
+.chip i { width: 34px; height: 34px; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .12); }
+.palette { inset-inline: 18px; bottom: 24px; display: grid; gap: 10px; }
+.palette small { font: 600 clamp(16px, 1.4vw, 22px)/1.1 var(--display); color: var(--lt); text-shadow: 0 2px 16px rgba(0, 0, 0, .4); }
+.palette div { display: flex; gap: 8px; }
+.palette i { flex: 1; height: clamp(38px, 3.4vw, 54px); border-radius: 10px; background: var(--c); box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .55), inset 0 0 0 1px rgba(244, 239, 231, .35); }
+/* the planning film: a pencil version of the kitchen, plan lines drawing in, then colour wiping across */
+.sk2 { filter: grayscale(1) contrast(1.5) brightness(1.18); }
+.grid2 { position: absolute; inset: 0; background-image: linear-gradient(rgba(43, 42, 41, .16) 1px, transparent 1px), linear-gradient(90deg, rgba(43, 42, 41, .16) 1px, transparent 1px); background-size: 22px 22px; background-color: rgba(251, 250, 247, .35); mix-blend-mode: multiply; }
+.plan2 { position: absolute; inset: 0; width: 100%; height: 100%; }
+.plan2 path { fill: none; stroke: var(--dk); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; stroke-dasharray: 1; }
+.plan2 path.thin { stroke-width: 1.4; }
+/* the clip vocabulary: every piece is visible by default and only animates while its scene is on */
+@keyframes f-push { from { transform: scale(1.03); } to { transform: scale(1.2); } }
+@keyframes f-pan { from { transform: scale(1.16) translateX(3%); } to { transform: scale(1.16) translateX(-3%); } }
+@keyframes f-detail { from { transform: scale(1.75); } to { transform: scale(2.05); } }
+@keyframes f-rise { from { opacity: 0; transform: translateY(16px); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes f-chip { from { opacity: 0; transform: translateX(-34px) scale(.9); } to { opacity: 1; transform: none; } }
+@keyframes f-wipe { from { clip-path: inset(0 0 0 100%); } to { clip-path: inset(0 0 0 0); } }
+@keyframes f-draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+@keyframes f-fadeout { to { opacity: 0; } }
+.sc.on .a-push { animation: f-push 8.4s linear both; }
+.sc.on .a-pan { animation: f-pan 4.6s linear both; }
+.sc.on .a-detail { animation: f-detail 2.9s linear both; }
+.sc.on .a-rise { animation: f-rise .9s var(--ease) var(--d, 0s) both; }
+.sc.on .a-chip { animation: f-chip .8s var(--ease) var(--d, 0s) both; }
+.sc.on .a-draw { animation: f-draw 1.1s cubic-bezier(.65, 0, .35, 1) var(--d, 0s) both; }
+.sc.on .a-fadeout { animation: f-fadeout .9s ease var(--d, 0s) both; }
+.sc.on .a-wipe.a-push { animation: f-wipe 1.7s cubic-bezier(.65, 0, .35, 1) var(--d, 0s) both, f-push 8.4s linear both; }
+.sc.on .a-wipe.a-pan { animation: f-wipe 1.5s cubic-bezier(.65, 0, .35, 1) var(--d, 0s) both, f-pan 4.6s linear both; }
+/* paper scenes (moodboard, floor plan): light, no dark vignette until a photo takes over */
+.mfilm .sc.paper { background: var(--lt); }
+.mfilm .sc.paper::after { opacity: 0; }
+.sc.on.paper::after { animation: f-fadein .9s ease var(--vd, 99s) both; }
+@keyframes f-fadein { from { opacity: 0; } to { opacity: 1; } }
+/* 02 · the moodboard builds itself */
+.mood { position: absolute; inset: 0; padding: clamp(12px, 1.4vw, 20px); display: grid; grid-template-columns: 1.25fr 1fr 1fr; grid-template-rows: 1fr 1fr; gap: clamp(8px, .8vw, 12px); }
+.mood figure { margin: 0; position: relative; overflow: clip; border-radius: 10px; box-shadow: 0 14px 28px -18px rgba(43, 42, 41, .55); }
+.mood figure img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mood .t1 { grid-row: 1 / 3; }
+.mood .sw { display: grid; grid-template-rows: repeat(4, 1fr); background: var(--lt); padding: 8px; gap: 6px; }
+.mood .sw i { border-radius: 6px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .08); }
+.mlabel { position: absolute; z-index: 3; left: 50%; bottom: 22px; translate: -50% 0; display: grid; justify-items: center; gap: 6px; padding: 14px 26px; border-radius: 16px; background: rgba(244, 239, 231, .96); box-shadow: 0 18px 40px -18px rgba(43, 42, 41, .55); white-space: nowrap; }
+.mlabel small { font: 400 10.5px/1 var(--display); letter-spacing: .32em; color: var(--gold-d); }
+.mlabel b { font: 600 clamp(18px, 1.7vw, 26px)/1.1 var(--display); color: var(--ink); }
+@keyframes f-tile { from { clip-path: inset(100% 0 0 0 round 10px); transform: translateY(18px); } to { clip-path: inset(0 0 0 0 round 10px); transform: none; } }
+@keyframes f-tileimg { from { transform: scale(1.35); } to { transform: scale(1.05); } }
+.sc.on .a-tile { animation: f-tile 1.1s var(--ease) var(--d, 0s) both; }
+.sc.on .a-tile img { animation: f-tileimg 4s var(--ease) var(--d, 0s) both; }
+/* 03 · the floor plan draws itself, then the finished kitchen opens out of it */
+.fplan { position: absolute; inset: 6% 5% 8%; width: 90%; height: 86%; background-image: linear-gradient(rgba(43, 42, 41, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(43, 42, 41, .07) 1px, transparent 1px); background-size: 20px 20px; }
+.fplan path, .fplan circle { fill: none; stroke: var(--dk); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; }
+.fplan .wall { stroke-width: 6; stroke-linecap: square; }
+.fplan .wall2 { stroke-width: 4; stroke-linecap: square; }
+.fplan .thin { stroke-width: 1.1; }
+.fplan g circle { stroke-dasharray: none; }
+.fplan .lbl text { fill: var(--mute); stroke: none; font: 600 13px/1 var(--font); text-anchor: middle; }
+@keyframes f-circle { from { clip-path: circle(0% at 70% 40%); } to { clip-path: circle(130% at 70% 40%); } }
+.sc.on .a-circle.a-push { animation: f-circle 2s cubic-bezier(.65, 0, .35, 1) var(--d, 0s) both, f-push 9s linear both; }
+.mfilm .sc .a-circle { z-index: 1; }
+.mfilm .sc.paper .tcard { z-index: 3; }
+/* 04 · one corner, three moments, and a timeline that runs along the bottom */
+.mfilm .tl { position: absolute; z-index: 4; inset-inline: 22px; bottom: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; padding-bottom: 12px; color: rgba(244, 239, 231, .62); font: 600 clamp(12px, .95vw, 14.5px)/1 var(--font); letter-spacing: .06em; }
+.tl span { transition: color .5s; }
+.tl span:nth-child(2) { text-align: center; } .tl span:nth-child(3) { text-align: left; }
+.tl i { position: absolute; inset-inline: 0; bottom: 0; height: 2px; background: rgba(244, 239, 231, .3); border-radius: 2px; }
+.tl i b { position: absolute; inset: 0; background: var(--lt); border-radius: 2px; transform: scaleX(var(--fp, 0)); transform-origin: right; }
+.mfilm[data-s="0"] .tl span:nth-child(1), .mfilm[data-s="1"] .tl span:nth-child(2), .mfilm[data-s="2"] .tl span:nth-child(3) { color: var(--lt); }
+.mfilm > .ftag { z-index: 4; }
+.tcard.up { bottom: 60px; }
+.mfilm:not(.playing) .sc, .mfilm:not(.playing) .sc * { animation-play-state: paused !important; }
+@media (prefers-reduced-motion: reduce) { .mfilm .sc * { animation: none !important; } .mfilm .a-fadeout { opacity: 0; } }
+.card .n { font: 900 clamp(56px, 5.4vw, 96px)/.9 var(--font); color: var(--gold-d); font-variant-numeric: lining-nums; }
+.card h3 { font: 600 clamp(26px, 2.4vw, 42px)/1.15 var(--display); }
+.card p { color: var(--mute); font-size: clamp(16px, 1.2vw, 19px); line-height: 1.65; max-width: 24em; }
+.card .tlink { justify-self: start; color: var(--gold-d); margin-top: 6px; }
+.film-prog { display: flex; align-items: center; gap: var(--gap-in); width: min(460px, 100% - 2 * var(--gutter)); margin: 0 auto; }
+.film-prog .bar { flex: 1; height: 2px; border-radius: 2px; background: rgba(43, 42, 41, .14); overflow: hidden; }
+.film-prog .bar i { display: block; height: 100%; background: var(--cta); transform: scaleX(var(--fp, .2)); transform-origin: right; }
+.film-prog .count { font: 600 13px/1 var(--font); letter-spacing: .14em; direction: ltr; unicode-bidi: isolate; min-width: 4em; }
+
+/* ===== TRACKS: expanding panels ===== */
+.tracks { background: var(--paper); }
+.panels { display: flex; gap: 12px; height: clamp(460px, 42vw, 600px); }
+.tracks .head.split .lead { display: grid; gap: 18px; justify-items: start; }
+.pnl { position: relative; flex: 1; min-width: 0; overflow: clip; border-radius: 18px; cursor: pointer; isolation: isolate; color: var(--lt); transition: flex 1.1s cubic-bezier(.22, .8, .2, 1); outline-offset: 4px; }
+.pnl.on { flex: 3.4; cursor: default; }
+.pnl img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: scale 1.4s var(--ease), filter .9s; filter: saturate(.75) brightness(.82); }
+.pnl.on img { scale: 1.04; filter: none; }
+.pnl::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(43, 42, 41, .25) 0%, rgba(43, 42, 41, .05) 35%, rgba(43, 42, 41, .88) 100%); }
+.pnl .n { position: absolute; top: 16px; inset-inline-start: 16px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; background: rgba(244, 239, 231, .92); color: var(--ink); font: 900 15px/1 var(--font); font-variant-numeric: lining-nums; box-shadow: 0 6px 14px rgba(0, 0, 0, .2); }
+.pnl .vt { position: absolute; bottom: 26px; inset-inline-start: 50%; translate: 50% 0; writing-mode: vertical-rl; font: 600 clamp(20px, 1.6vw, 26px)/1 var(--display); letter-spacing: .04em; white-space: nowrap; text-shadow: 0 2px 14px rgba(0, 0, 0, .45); transition: opacity .4s; }
+.pnl.on .vt { opacity: 0; }
+.pnl .body { position: absolute; inset-inline: 0; bottom: 0; padding: var(--pad); display: grid; gap: var(--gap-in); max-width: 540px; opacity: 0; translate: 0 20px; transition: opacity .5s .2s, translate .8s .2s var(--ease); pointer-events: none; }
+.pnl.on .body { opacity: 1; translate: 0 0; pointer-events: auto; }
+.pnl h3 { font: 600 clamp(28px, 2.6vw, 44px)/1.1 var(--display); }
+.pnl p { color: rgba(244, 239, 231, .85); font-size: 16.5px; line-height: 1.6; }
+.pnl .tlink { justify-self: start; color: var(--lt); }
+
+/* ===== BEFORE / AFTER: the line follows the mouse, the stage tilts a little ===== */
+.ba { background: linear-gradient(180deg, var(--mist-l) 0%, var(--paper) 40%); }
+.ba-stage { --x: 50%; position: relative; width: min(1180px, 100%); margin-inline: auto; aspect-ratio: 1148 / 762; border-radius: 26px; overflow: clip; cursor: ew-resize; touch-action: pan-y; user-select: none; -webkit-user-select: none; box-shadow: 0 50px 90px -50px rgba(43, 42, 41, .55); transform: perspective(1600px) rotateX(var(--ty, 0deg)) rotateY(var(--tx, 0deg)); will-change: transform; }
+.ba-stage img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; -webkit-user-drag: none; }
+.ba-after { position: absolute; inset: 0; scale: 1.04; translate: var(--px, 0) 0; }
+/* planning notes on the finished kitchen: thin ink lines, dashed outlines, numbered gold markers */
+.ba-sketch { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.ba-sketch path, .ba-sketch rect, .ba-sketch ellipse { fill: none; stroke: var(--dk); stroke-width: 2; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+/* each note draws itself in turn: the marker pops, the measuring lines run, the dashed outline is traced, then the label is typed */
+.ba-sketch .dash { stroke-dasharray: 7 6; animation: march 1.6s linear infinite; animation-play-state: paused; }
+.ba-sketch .n.on .dash { animation-play-state: running; }
+@keyframes march { to { stroke-dashoffset: -26; } }
+.ba-sketch .trace { fill: none; stroke: var(--lt); stroke-width: 26; stroke-dasharray: 1; stroke-dashoffset: 1; vector-effect: non-scaling-stroke; transition: stroke-dashoffset 1.5s cubic-bezier(.65, 0, .35, 1) .25s; }
+.ba-sketch .draw, .ba-sketch .lead { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.1s cubic-bezier(.65, 0, .35, 1) .2s; }
+.ba-sketch .lead { stroke-width: 1.3; transition-delay: .9s; transition-duration: .7s; }
+.ba-sketch .mk { fill: var(--gold-d); stroke: var(--lt); stroke-width: 2.5; stroke-dasharray: none; opacity: 0; transform-box: fill-box; transform-origin: center; scale: .2; transition: opacity .3s, scale .6s cubic-bezier(.34, 1.6, .64, 1); }
+.ba-sketch .ring { fill: none; stroke: var(--gold-d); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
+.ba-sketch .n.on .ring { animation: ring2 2.4s ease-out .3s infinite; }
+@keyframes ring2 { 0% { opacity: .8; scale: 1; } 70%, 100% { opacity: 0; scale: 2.2; } }
+.ba-sketch .mt { fill: var(--lt); font: 900 19px/1 var(--font); text-anchor: middle; opacity: 0; transition: opacity .3s .2s; }
+.ba-sketch .n { transition: opacity .4s; }
+.ba-sketch .n.on .draw, .ba-sketch .n.on .lead, .ba-sketch .trace.on { stroke-dashoffset: 0; }
+.ba-sketch .n.on .mt { opacity: 1; }
+.ba-sketch .n.on .mk { opacity: 1; scale: 1; }
+.ba-note { position: absolute; z-index: 1; padding: .55em .95em; border-radius: 8px; background: rgba(244, 239, 231, .93); border: 1px solid rgba(43, 42, 41, .18); box-shadow: 0 6px 18px -8px rgba(43, 42, 41, .35); font: 600 clamp(10px, 1.05vw, 14px)/1 var(--font); letter-spacing: .02em; color: var(--ink); white-space: nowrap; opacity: 0; scale: .9; transform-origin: right center; transition: opacity .3s, scale .35s var(--ease); pointer-events: none; }
+.ba-note.on { opacity: 1; scale: 1; }
+.ba-note:empty::before { content: "\200b"; }
+/* a caret while text is being typed */
+.typing::after { content: ""; display: inline-block; width: 1.5px; height: 1em; margin-inline-start: 2px; vertical-align: -.12em; background: var(--gold-d); animation: caret .7s steps(1) infinite; }
+@keyframes caret { 50% { opacity: 0; } }
+.ghost { color: transparent; }
+.ba-stage[data-focus] .ba-sketch .n, .ba-stage[data-focus] .ba-note { opacity: .18; transition-delay: 0s; }
+.ba-stage[data-focus="1"] .n1, .ba-stage[data-focus="2"] .n2, .ba-stage[data-focus="3"] .n3, .ba-stage[data-focus="4"] .n4, .ba-stage[data-focus="5"] .n5 { opacity: 1 !important; }
+.ba-stage[data-focus="1"] .ba-note.n1, .ba-stage[data-focus="2"] .ba-note.n2, .ba-stage[data-focus="3"] .ba-note.n3, .ba-stage[data-focus="4"] .ba-note.n4, .ba-stage[data-focus="5"] .ba-note.n5 { scale: 1.12; }
+/* the explanations under the photo */
+.ba-notes { list-style: none; margin: clamp(24px, 3vw, 40px) auto 0; padding: 0; width: min(1180px, 100%); display: grid; grid-template-columns: repeat(5, 1fr); gap: clamp(12px, 1.4vw, 22px); }
+.ba-notes li { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 16px 0 0; border-top: 1px solid rgba(43, 42, 41, .15); cursor: default; transition: border-color .4s; }
+.ba-notes li:hover, .ba-notes li.on { border-top-color: var(--gold-d); }
+.ba-notes b { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--gold-d); color: var(--lt); font: 900 14px/1 var(--font); }
+.ba-notes h3 { font: 600 clamp(16px, 1.15vw, 19px)/1.3 var(--display); margin-bottom: 4px; }
+.ba-notes p { font-size: clamp(14px, .95vw, 15.5px); line-height: 1.6; color: var(--mute); }
+.ba-before { position: absolute; inset: 0; clip-path: inset(0 0 0 var(--x)); }
+.ba-before img { filter: saturate(.8) contrast(.95); scale: 1.04; translate: calc(var(--px, 0px) * -1) 0; }
+.ba-line { position: absolute; top: 0; bottom: 0; left: var(--x); width: 2px; margin-left: -1px; background: var(--lt); box-shadow: 0 0 20px rgba(0, 0, 0, .3); z-index: 2; }
+.ba-knob { position: absolute; top: 50%; left: 50%; translate: -50% -50%; width: 66px; height: 66px; border-radius: 50%; display: grid; place-items: center; background: rgba(244, 239, 231, .9); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--ink); box-shadow: 0 12px 30px rgba(0, 0, 0, .28); transition: scale .4s var(--ease); }
+.ba-knob svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.ba-stage:hover .ba-knob, .ba-stage.drag .ba-knob { scale: 1.12; }
+.ba-tag { position: absolute; top: 20px; z-index: 3; padding: 11px 20px; border-radius: 999px; font: 600 14px/1 var(--font); letter-spacing: .1em; transition: opacity .4s; }
+.t-before { right: 20px; background: rgba(244, 239, 231, .92); color: var(--ink); opacity: var(--ob, 1); }
+.t-after { left: 20px; background: var(--cta); color: var(--lt); opacity: var(--oa, 1); }
+.ba-foot { width: min(1180px, 100%); margin: 22px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.ba-cap { font: 600 13px/1.5 var(--font); letter-spacing: .12em; color: var(--mute); }
+.ba-foot .tlink { color: var(--gold-d); }
+
+/* ===== ABOUT: giant moving words, a portrait that opens as you scroll, words that light up ===== */
+.about { background: linear-gradient(180deg, var(--ivory) 0%, var(--stone-l) 100%); padding-top: clamp(70px, 7vw, 120px); }
+.band { display: grid; gap: .1em; font: 300 clamp(64px, 10.5vw, 190px)/1 var(--display); letter-spacing: -.01em; color: var(--ink); user-select: none; pointer-events: none; overflow: clip; padding-block: .06em; }
+.brow { display: flex; justify-content: center; white-space: nowrap; will-change: transform; }
+.brow span { flex: none; }
+.brow.alt { color: transparent; -webkit-text-stroke: 1.2px var(--gold-d); font-weight: 400; }
+.brow b { font-weight: 600; color: var(--gold-d); }
+.band-mid { background: linear-gradient(180deg, var(--ivory), var(--stone-l)); padding-block: clamp(36px, 5vw, 90px) clamp(10px, 2vw, 30px); }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(36px, 6vw, 110px); align-items: center; margin-top: clamp(40px, 5vw, 80px); }
+.about-frame { position: relative; margin: 0; aspect-ratio: 4 / 5; border-radius: 28px; overflow: clip; clip-path: inset(var(--ci, 14%) round 28px); box-shadow: 0 40px 70px -40px rgba(43, 42, 41, .55); }
+.about-frame img { position: absolute; inset: -8% 0; width: 100%; height: 116%; object-fit: cover; object-position: 73% 30%; scale: 1.28; transform-origin: 73% 30%; will-change: transform; }
+.about-frame figcaption { position: absolute; bottom: 18px; inset-inline-start: 18px; padding: 10px 16px; border-radius: 999px; background: rgba(244, 239, 231, .92); font: 600 13.5px/1 var(--font); color: var(--ink); }
+.about-copy { display: grid; gap: clamp(16px, 1.6vw, 24px); }
+.about-copy .hello { font: 300 clamp(38px, 3.6vw, 62px)/1.05 var(--display); }
+.about-copy .hello b { font-weight: 600; }
+.about-copy .role { font: 600 13px/1.5 var(--font); letter-spacing: .12em; color: var(--gold-d); }
+.about-copy .big { font: 300 clamp(21px, 1.75vw, 29px)/1.5 var(--display); color: var(--ink); }
+.afacts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(43, 42, 41, .15); }
+.afacts div { padding: 18px 0 4px; padding-inline-end: 14px; }
+.afacts div + div { border-inline-start: 1px solid rgba(43, 42, 41, .15); padding-inline-start: 18px; }
+.afacts b { display: block; font: 600 clamp(20px, 1.6vw, 26px)/1.2 var(--display); color: var(--gold-d); }
+.afacts span { font-size: 14.5px; color: var(--mute); line-height: 1.5; }
+.about-copy .btn { justify-self: start; }
+
+/* ===== SOCIAL: curved video wall, follows the mouse ===== */
+.social { background: var(--noir); color: var(--on-dark); }
+.social .title { color: var(--lt); } .social .title b { color: var(--lt); font-weight: 600; }
+.social .label { color: var(--gold); }
+.curve { position: relative; height: clamp(440px, 40vw, 600px); perspective: 1500px; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.curve .rc { position: absolute; top: 0; left: 50%; width: clamp(210px, 17vw, 270px); margin-left: calc(clamp(210px, 17vw, 270px) / -2); aspect-ratio: 9 / 18.5; will-change: transform; cursor: pointer; }
+.rc .phone { width: 100%; height: 100%; border-radius: 34px; padding: 7px; background: var(--dk); box-shadow: 0 40px 70px -30px rgba(0, 0, 0, .8), inset 0 0 0 1.5px #3b3530; }
+.rc .scr { position: relative; height: 100%; border-radius: 28px; overflow: clip; background: #000; }
+.rc .scr::before { content: ""; position: absolute; top: 8px; left: 50%; translate: -50% 0; width: 32%; height: 16px; border-radius: 99px; background: #000; z-index: 2; }
+.rc video { width: 100%; height: 100%; object-fit: cover; }
+.rc .ui { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: flex-end; padding: 14px; background: linear-gradient(transparent 58%, rgba(0, 0, 0, .65)); font-size: 13px; line-height: 1.35; color: var(--lt); }
+.rc .who { display: flex; align-items: center; gap: 8px; font: 600 12px/1 var(--font); letter-spacing: .04em; margin-bottom: 6px; direction: ltr; justify-content: flex-end; }
+.rc .who img { width: 24px; height: 24px; border-radius: 50%; background: var(--lt); padding: 2px; object-fit: contain; }
+.curve-hint { text-align: center; margin-top: 20px; font: 400 12px/1 var(--display); letter-spacing: .3em; color: var(--dim); }
+.curve-hint .touch { display: none; }
+@media (any-hover: none) { .curve-hint .mouse { display: none; } .curve-hint .touch { display: inline; } }
+.social .more { display: flex; justify-content: center; margin-top: 18px; }
+
+/* ===== REVIEWS: one quote at a time ===== */
+.reviews { background: var(--ivory); }
+.qstage { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(30px, 6vw, 110px); align-items: center; }
+.qphoto { position: relative; aspect-ratio: 4 / 5; border-radius: 999px 999px 18px 18px; overflow: clip; background: var(--stone); }
+.qphoto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .9s, scale 1.6s var(--ease); }
+.qphoto img:not(.on) { opacity: 0; scale: 1.06; }
+.qtext { display: grid; gap: var(--gap-in); }
+.stars { display: flex; gap: 4px; color: var(--gold); }
+.stars svg { width: 16px; height: 16px; fill: currentColor; }
+.qtext blockquote { font: 300 clamp(26px, 2.6vw, 44px)/1.3 var(--display); min-height: 4.2em; transition: opacity .5s; }
+.qtext cite { font: 600 13px/1.4 var(--font); font-style: normal; letter-spacing: .12em; color: var(--mute); transition: opacity .5s; }
+.qtext.swap blockquote, .qtext.swap cite { opacity: 0; }
+.qnav { display: flex; align-items: center; gap: 14px; margin-top: var(--gap-in); }
+.round { width: 54px; height: 54px; border-radius: 50%; border: 1px solid rgba(43, 42, 41, .25); background: transparent; color: var(--ink); display: grid; place-items: center; cursor: pointer; font-size: 19px; transition: background .3s; }
+.round:hover { background: rgba(43, 42, 41, .05); }
+.qnav .count { font: 600 13px/1 var(--font); letter-spacing: .14em; direction: ltr; min-width: 4.5em; text-align: center; }
+/* project thumbnails: each quote with its home; the bar under the active one fills, then the next quote comes */
+.qthumbs { display: flex; flex-wrap: wrap; gap: 10px; }
+.qthumbs button { position: relative; width: 74px; aspect-ratio: 1; padding: 0; border: 0; border-radius: 14px; overflow: clip; cursor: pointer; background: var(--stone); opacity: .55; transition: opacity .5s, transform .5s var(--ease); }
+.qthumbs button:hover { opacity: .85; }
+.qthumbs button.on { opacity: 1; transform: translateY(-4px); }
+.qthumbs img { width: 100%; height: 100%; object-fit: cover; }
+.qthumbs i { position: absolute; inset-inline: 8px; bottom: 7px; height: 3px; border-radius: 3px; background: rgba(244, 239, 231, .5); overflow: clip; display: none; }
+.qthumbs .on i { display: block; }
+.qthumbs i span { position: absolute; inset: 0; background: var(--lt); transform: scaleX(0); transform-origin: right; }
+.qthumbs .on i span { animation: qfill 6s linear forwards; animation-play-state: paused; }
+.qstage.playing .qthumbs .on i span { animation-play-state: running; }
+@keyframes qfill { to { transform: scaleX(1); } }
+.qcap { font: 600 12px/1 var(--font); letter-spacing: .14em; color: var(--mute); }
+.qnote { display: inline-block; justify-self: start; padding: 6px 12px; border-radius: 999px; border: 1px dashed rgba(43, 42, 41, .3); font: 600 12px/1.3 var(--font); color: var(--mute); }
+
+/* ===== MEETING: light, brand colours ===== */
+.meeting { text-align: center; background: linear-gradient(180deg, var(--mist-l) 0%, var(--stone-l) 100%); }
+.meeting .wrap { position: relative; max-width: 900px; }
+.meeting .mark { width: 54px; height: auto; margin: 0 auto 18px; }
+.meeting .title { max-width: 14em; margin-inline: auto; }
+.meeting .lead { margin: var(--gap-in) auto 0; }
+.meeting .actions { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 14px 30px; margin-top: var(--gap); }
+.meeting .tel { font: 600 17px/1 var(--font); letter-spacing: .1em; color: var(--ink); text-decoration: none; direction: ltr; display: inline-flex; align-items: center; gap: 10px; }
+.meeting .tel .ico { width: 18px; height: 18px; color: var(--gold-d); }
+
+/* ===== FOOTER ===== */
+.footer { background: var(--noir-2); color: var(--dim); padding: clamp(70px, 7vw, 110px) 0 0; font-size: 15px; }
+.f-top { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--gap); padding-bottom: var(--gap); margin-bottom: var(--gap); border-bottom: 1px solid rgba(244, 239, 231, .08); }
+.f-logo { display: flex; align-items: center; gap: 16px; }
+.f-logo .mark { width: 44px; height: auto; } .f-logo .word { width: 190px; height: auto; }
+.f-about { font: 300 clamp(22px, 2vw, 32px)/1.3 var(--display); color: var(--on-dark); max-width: 18em; }
+.fcols { display: grid; grid-template-columns: 1fr 1fr 1.3fr; gap: var(--gap); }
+.footer h4 { margin: 0 0 1em; color: var(--gold); font: 400 12px/1 var(--display); letter-spacing: .3em; }
+.footer a { display: block; text-decoration: none; margin-bottom: .6em; }
+.footer a:hover { color: var(--lt); }
+.f-contact a, .f-contact p { display: flex; align-items: center; gap: 10px; margin: 0 0 .6em; }
+.f-contact .ico { width: 17px; height: 17px; color: var(--gold); flex: none; }
+.socials { display: flex; gap: 8px; margin-top: var(--gap-in); }
+.socials a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(244, 239, 231, .22); display: grid; place-items: center; margin: 0; }
+.socials .ico { width: 19px; height: 19px; }
+.f-legal { display: flex; flex-wrap: wrap; gap: 6px 26px; margin-top: var(--gap); padding-top: var(--gap-in); border-top: 1px solid rgba(244, 239, 231, .08); font-size: 13px; }
+.f-legal a { margin: 0; }
+.credit { margin-top: 40px; padding: 18px var(--gutter); text-align: center; border-top: 1px solid rgba(244, 239, 231, .06); font-size: 12px; letter-spacing: .12em; }
+
+/* ===== floating ===== */
+.wa { position: fixed; bottom: 24px; inset-inline-start: 24px; z-index: 50; width: 58px; height: 58px; border-radius: 50%; background: var(--lt); display: grid; place-items: center; box-shadow: 0 12px 28px rgba(0, 0, 0, .2); transition: transform .3s; }
+.wa:hover { transform: scale(1.06); }
+.a11y { position: fixed; bottom: 24px; inset-inline-end: 24px; z-index: 50; width: 46px; height: 46px; border-radius: 50%; background: var(--cta); color: var(--lt); border: 0; display: grid; place-items: center; cursor: pointer; box-shadow: 0 8px 20px rgba(0, 0, 0, .2); }
+
+/* ===== motion ===== */
+.js .curtain { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s var(--ease); }
+.js .curtain img { scale: 1.1; transition: scale 1.8s var(--ease); }
+.js .curtain.in { clip-path: inset(0); } .js .curtain.in img { scale: 1; }
+.js .rise { opacity: 0; translate: 0 34px; transition: opacity 1s ease, translate 1.1s var(--ease); }
+.js .rise.in { opacity: 1; translate: 0 0; }
+/* every heading rises word by word out of its own line */
+.w { display: inline-block; overflow: clip; vertical-align: top; padding-bottom: .12em; margin-bottom: -.12em; }
+.w > span { display: inline-block; }
+.js [data-split] .w > span { translate: 0 112%; rotate: 4deg; transform-origin: right bottom; transition: translate 1.25s var(--ease), rotate 1.25s var(--ease); transition-delay: calc(var(--i, 0) * 55ms); }
+.js [data-split].in .w > span { translate: 0 0; rotate: 0deg; }
+/* paragraphs come in soft and blurred */
+.js .rise { opacity: 0; translate: 0 40px; filter: blur(6px); transition: opacity 1.1s ease, translate 1.3s var(--ease), filter 1.1s ease; }
+.js .rise.in { opacity: 1; translate: 0 0; filter: none; }
+/* labels draw their line */
+.js .label::before { transform: scaleX(0); transform-origin: right; transition: transform 1.2s var(--ease) .2s; }
+.js .label.in::before { transform: scaleX(1); }
+/* pictures open from the middle */
+.js .reveal { clip-path: inset(10% 10% 10% 10% round 26px); transition: clip-path 1.6s var(--ease); }
+.js .reveal.in { clip-path: inset(0 0 0 0 round 26px); }
+.js .reveal img { scale: 1.25; transition: scale 2.2s var(--ease); }
+.js .reveal.in img { scale: 1; }
+.js .hero .cutbox { opacity: 0; transition: opacity 1.4s ease; }
+.js .hero.in .cutbox { opacity: 1; }
+.js .hero .cut-lines span { display: inline-block; opacity: 0; translate: 0 18px; transition: opacity .9s, translate 1.1s var(--ease); }
+.js .hero.in .cut-lines span { opacity: 1; translate: 0 0; }
+.js .hero .cut-lines span:nth-child(1) { transition-delay: 1.1s; } .js .hero .cut-lines span:nth-child(2) { transition-delay: 1.2s; } .js .hero .cut-lines span:nth-child(3) { transition-delay: 1.3s; } .js .hero .cut-lines span:nth-child(4) { transition-delay: 1.4s; }
+.js .hero .hero-foot { opacity: 0; translate: 0 20px; transition: opacity 1s 1.5s, translate 1.2s 1.5s var(--ease); }
+.js .hero.in .hero-foot { opacity: 1; translate: 0 0; }
+@media (prefers-reduced-motion: reduce) {
+  .js .curtain, .js .rise, .js [data-split] .w > span, .js .hero .cutbox, .js .reveal, .js .hero .cut-lines span, .js .hero .hero-foot { clip-path: none !important; opacity: 1 !important; translate: 0 0 !important; rotate: 0deg !important; scale: 1 !important; filter: none !important; transition: none !important; }
+  .js .curtain img, .js .reveal img { scale: 1 !important; }
+  .hslide img, .hslide video { animation: none; }
+}
+
+/* ===== tablet ===== */
+@media (max-width: 1100px) { .nav { gap: 1.1rem; } .nav > a { font-size: 12.5px; } .logo .word { width: 118px; } .cut-lines { inset-inline-end: -22%; } }
+@media (max-width: 980px) {
+  .nav { display: none; } .burger { display: block; }
+  .qstage, .head.split { grid-template-columns: 1fr; }
+  /* story: not pinned on narrow screens; the words light up by their place on the screen */
+  .story { height: auto; }
+  .story-pin { position: relative; height: auto; padding-block: var(--section); }
+  .story .wrap { grid-template-columns: 1fr; }
+  .ba-notes { grid-template-columns: 1fr 1fr; }
+  .mono { max-width: 380px; }
+  .card { grid-template-columns: 1fr; grid-template-rows: 1fr auto; width: min(84vw, 640px); gap: 12px; }
+  .card .txt { padding: 4px 10px 12px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-frame { max-width: 520px; width: 100%; justify-self: center; }
+  .head.split .lead { justify-self: start; }
+  .svc { grid-template-columns: 1fr; }
+  .svc-media { display: none; }
+  .m-img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; margin-top: 6px; }
+  .svc-list:hover .srow:not(.on), .svc-list.focus .srow:not(.on) { opacity: 1; }
+  .fcols { grid-template-columns: 1fr 1fr; }
+  .cut-lines span::before { display: none; }
+}
+
+/* ===== iPAD (701–980px: iPad portrait) ===== */
+@media (min-width: 701px) and (max-width: 980px) {
+  :root { --gutter: 40px; --section: 110px; }
+  /* hero sized to its content instead of the whole tall screen */
+  .hero { min-height: auto; padding-bottom: 80px; }
+  .cutbox { width: 92vw; margin-block: 70px 36px; }
+  .hero h1 { font-size: 34px; }
+  /* tracks: taller panels */
+  .panels { height: 560px; }
+  /* process: bigger cards that use the tall screen */
+  .pview { max-height: 900px; }
+  .card { width: min(82vw, 700px); }
+  .card .n { font-size: 56px; } .card h3 { font-size: 30px; } .card p { font-size: 17px; }
+  /* about and reviews keep two columns */
+  .about-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .about-frame { max-width: none; }
+  .about-copy .hello { font-size: 42px; } .about-copy .big { font-size: 21px; }
+  .qstage { grid-template-columns: .8fr 1.2fr; gap: 40px; }
+  .qtext blockquote { font-size: 28px; }
+  .qthumbs { gap: 8px; } .qthumbs button { width: 56px; border-radius: 10px; }
+  .ba-notes { grid-template-columns: 1fr 1fr; }
+  .fcols { grid-template-columns: 1fr 1fr 1.3fr; }
+}
+/* tall iPad portrait: the story stays pinned while its words light up, the S above the text */
+@media (min-width: 701px) and (max-width: 980px) and (min-height: 900px) {
+  .story { height: 300vh; }
+  .story-pin { position: sticky; top: 0; height: 100vh; height: 100svh; padding-block: 96px 30px; }
+  .story .wrap { gap: 28px; align-content: center; }
+  .mono { max-width: min(420px, 34vh); }
+  .points li { padding: 14px 0; }
+}
+/* landscape tablets and laptops: the before/after fits the screen height */
+.ba-stage { width: min(1180px, 100%, calc((100svh - 190px) * 1.506)); }
+.ba-foot, .ba-notes { width: min(1180px, 100%); }
+/* Safari (iPad): prefixed clip for the hero film */
+.film-clip { -webkit-clip-path: url(#hclipBB); }
+
+/* ===== MOBILE (≤700px) ===== */
+@media (max-width: 700px) {
+  :root { --gutter: 20px; --pad: 20px; --gap-in: 12px; --gap: 32px; --section: 72px; }
+  body { font-size: 16.5px; }
+  html { scroll-padding-top: 70px; }
+  .title { font-size: clamp(32px, 9.4vw, 42px); }
+  .label { font-size: 10.5px; letter-spacing: .3em; } .label::before { width: 20px; }
+  .header { background: rgba(244, 239, 231, .95); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .header .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); min-height: 62px; gap: 6px; }
+  .burger { justify-self: start; margin-inline-start: -6px; }
+  .logo { justify-self: center; gap: 7px; } .logo .mark { width: 22px; } .logo .word { width: 86px; }
+  .header .cta { justify-self: end; min-height: 36px; padding: 0 1em; font-size: 12px; letter-spacing: 0; }
+  .header .cta .arr, .header .cta .m-hide { display: none; }
+  html.bar-on .header .cta { background: transparent; color: var(--ink); border-color: rgba(43, 42, 41, .35); box-shadow: none; }
+  html.menu-open .header { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; z-index: 60; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(8.5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-8.5px) rotate(-45deg); }
+  .nav.open { position: fixed; inset: 0; z-index: -1; display: flex; flex-direction: column; overflow-y: auto; padding: 92px var(--gutter) calc(var(--gutter) + env(safe-area-inset-bottom)); background: var(--paper); animation: sheet .6s var(--ease); gap: 0; }
+  @keyframes sheet { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+  .nav.open .sheet-kicker { display: block; margin-bottom: var(--gap-in); }
+  .nav.open > a { min-height: 64px; display: flex; align-items: center; padding: 0; border-bottom: 1px solid rgba(43, 42, 41, .1); font: 600 24px/1 var(--display); }
+  .nav.open > a::after { display: none; }
+  .nav.open .sheet-foot { display: grid; gap: var(--gap-in); margin-top: var(--gap); }
+  .nav.open .sheet-foot .btn { width: 100%; }
+  .nav.open .sheet-row { display: flex; justify-content: space-between; align-items: center; }
+  .nav.open .sheet-tel { font: 600 16px/1 var(--font); letter-spacing: .1em; text-decoration: none; direction: ltr; min-height: 44px; display: flex; align-items: center; }
+  .nav.open .soc { display: flex; gap: 8px; }
+  .nav.open .soc a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(43, 42, 41, .25); display: grid; place-items: center; }
+  .nav.open .soc .ico { width: 19px; height: 19px; }
+  .nav.open .sheet-legal { display: flex; flex-wrap: wrap; gap: 0 18px; padding-top: var(--gap-in); border-top: 1px solid rgba(43, 42, 41, .1); }
+  .nav.open .sheet-legal a { min-height: 40px; display: flex; align-items: center; font-size: 13px; color: var(--mute); text-decoration: none; }
+
+  .hero { padding-top: 84px; min-height: 100svh; }
+  .hero-top .kick { font-size: 10.5px; letter-spacing: .3em; }
+  .hero h1 { font-size: 27px; }
+  .hero-top .sub { font-size: 11px; letter-spacing: .18em; }
+  .cutbox { width: 98vw; margin-block: 40px 10px; }
+  .hero { min-height: auto; padding-bottom: 44px; grid-template-rows: auto auto auto auto; }
+  .cut-lines { font-size: 11.5px; letter-spacing: .18em; gap: 10px; margin-bottom: 18px; }
+  .cut-lines span + span::before { margin-inline-end: 10px; }
+  .hero-foot { flex-direction: column; gap: 12px; width: calc(100vw - 2 * var(--gutter)); justify-self: center; }
+  .hero { padding-inline: 1vw; }
+  .hero-foot .btn { width: 100%; }
+
+  .srow { grid-template-columns: 70px 1fr; gap: 14px; padding: 24px 0; }
+  .srow h3 { font-size: 23px; } .srow p { font-size: 15.5px; }
+  .tlink { white-space: nowrap; }
+
+  .story .mono { max-width: 330px; }
+  .mono .cross { letter-spacing: .6em; font-size: 12px; }
+  .story .quote { font-size: 32px; }
+  .points p { font-size: 16px; }
+
+  .proc-pin { padding-top: 76px; gap: 14px; }
+  .process .head { gap: 8px; } .process .head .lead { font-size: 15px; }
+  .ptrack { gap: 12px; }
+  .card { width: 84vw; padding: 10px; border-radius: 22px; }
+  .card .txt { gap: 6px; padding: 2px 8px 8px; }
+  .card .n { font-size: 38px; }
+  .card h3 { font-size: 22px; } .card p { font-size: 15px; line-height: 1.5; }
+  .dev-phone { height: 90%; }
+
+  .band { font-size: 19vw; }
+  .ba-stage { border-radius: 18px; }
+  .ba-note { display: none; }
+  .ba-sketch .mk { r: 24px; } .ba-sketch .mt { font-size: 26px; translate: 0 3px; }
+  .ba-notes { grid-template-columns: 1fr; gap: 0; }
+  .ba-notes li { padding: 14px 0; }
+  .ba-knob { width: 50px; height: 50px; } .ba-knob svg { width: 24px; height: 24px; }
+  .ba-tag { top: 12px; padding: 8px 14px; font-size: 12px; } .t-before { right: 12px; } .t-after { left: 12px; }
+  .ba-foot { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .afacts { grid-template-columns: 1fr; }
+  .afacts div + div { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid rgba(43, 42, 41, .12); }
+  .afacts div { padding: 12px 0; }
+  .about-copy .btn { justify-self: stretch; }
+  .qthumbs { justify-content: center; } .qthumbs button { width: 52px; border-radius: 10px; }
+
+  .panels { flex-direction: column; height: auto; gap: 8px; }
+  .pnl { flex: none; height: 96px; transition: height .8s var(--ease); }
+  .pnl.on { height: 430px; }
+  .pnl .vt { writing-mode: horizontal-tb; bottom: auto; top: 50%; translate: 0 -50%; inset-inline-start: 92px; font-size: 20px; }
+  .pnl .n { top: 50%; translate: 0 -50%; width: 30px; height: 30px; font-size: 13px; }
+  .pnl.on .n { top: 16px; translate: 0 0; }
+  .pnl .vt { inset-inline-start: 62px; }
+
+  .about-copy .hello { font-size: 36px; }
+  .about-copy .big { font-size: 20px; }
+
+  .curve { height: 116vw; perspective: 900px; }
+  .curve .rc { width: 52vw; margin-left: -26vw; }
+
+  .qphoto { max-width: 300px; justify-self: center; width: 100%; }
+  .qtext { text-align: center; justify-items: center; }
+  .qtext blockquote { font-size: 24px; min-height: 5.4em; }
+
+  .meeting .actions { flex-direction: column; } .meeting .btn { width: 100%; }
+  .f-top { flex-direction: column; align-items: flex-start; }
+  .f-logo .mark { width: 36px; } .f-logo .word { width: 150px; }
+  .fcols { grid-template-columns: 1fr 1fr; gap: var(--gap) var(--pad); }
+  .fcols .f-contact { grid-column: 1 / -1; }
+  .footer a { display: flex; align-items: center; min-height: 44px; margin: 0; }
+  .f-contact a, .f-contact p { min-height: 44px; margin: 0; }
+  .credit { padding-bottom: calc(var(--pad) + 84px + env(safe-area-inset-bottom)); line-height: 1.6; }
+
+  .wa { display: none; }
+  .mbar { position: fixed; z-index: 50; display: flex; align-items: center; gap: 6px; padding: 5px; left: 50%; width: calc(100% - 2 * (var(--gutter) + 50px)); max-width: 320px; bottom: calc(14px + env(safe-area-inset-bottom)); border-radius: 999px; background: rgba(244, 239, 231, .92); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: 0 12px 30px rgba(0, 0, 0, .18); transform: translate(-50%, 170%); transition: transform .4s var(--ease); }
+  .mbar.on { transform: translate(-50%, 0); }
+  .mbar-main { flex: 1; min-height: 46px; display: flex; align-items: center; justify-content: center; gap: .5em; border-radius: 999px; background: var(--cta); color: var(--lt); font: 600 13.5px/1 var(--font); text-decoration: none; white-space: nowrap; }
+  .mbar-wa { flex: 0 0 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--lt); box-shadow: 0 2px 8px rgba(0, 0, 0, .12); }
+  .mbar-wa svg { width: 28px; height: 28px; }
+  .a11y { width: 40px; height: 40px; inset-inline-end: var(--gutter); bottom: calc(20px + env(safe-area-inset-bottom)); }
+}
+
+/* =====================================================================
+   v4 · two colours, calm motion, quieter type (Sara's notes)
+   Dark #2A2622 and light #F3EFE8 only; everything else is a tint of one of them.
+   Sections alternate light / dark for contrast and a steady rhythm.
+   ===================================================================== */
+:root {
+  --dk: #2B2A29; --lt: #F4EFE7; --au: #D07A3F; --au-l: #E39A66;
+  --paper: var(--lt); --white: var(--lt); --ivory: var(--lt); --stone: var(--lt); --stone-l: var(--lt); --mist: var(--lt); --mist-l: var(--lt);
+  --noir: var(--dk); --noir-2: var(--dk);
+  --ink: var(--dk); --mute: rgba(43, 42, 41, .68); --line: rgba(43, 42, 41, .14);
+  --gold: var(--dk); --gold-d: var(--dk); --gold-l: var(--lt); --metal: var(--dk); --cta: var(--dk);
+  --on-dark: var(--lt); --dim: rgba(244, 239, 231, .72);
+  /* type scale */
+  --fs-xs: 12px; --fs-sm: 14px; --fs-body: clamp(15.5px, .95vw, 17px); --fs-lead: clamp(16px, 1.05vw, 18px);
+  --fs-h4: clamp(18px, 1.3vw, 21px); --fs-h3: clamp(20px, 1.6vw, 26px); --fs-h2: clamp(28px, 2.4vw, 42px); --fs-h1: clamp(24px, 2vw, 34px);
+}
+/* dark sections swap the pair */
+.process, .social, .meeting, .footer { --ink: var(--lt); --paper: var(--dk); --mute: rgba(244, 239, 231, .72); --line: rgba(244, 239, 231, .16); --gold: var(--lt); --gold-d: var(--lt); color: var(--lt); }
+.process, .meeting { background: var(--dk); }
+.process .card, .process .card * { --ink: var(--dk); --paper: var(--lt); --mute: rgba(43, 42, 41, .68); --gold-d: var(--dk); }
+.process .card { color: var(--dk); }
+body { background: var(--lt); color: var(--dk); font-size: var(--fs-body); line-height: 1.7; }
+.hero { background: var(--grain), var(--lt); }
+.band-mid, .about, .story, .tracks, .ba, .reviews { background: var(--lt); }
+.tracks, .story, .ba, .about, .reviews { border-top: 1px solid var(--line); }
+/* one button style: solid, quiet */
+.btn-cta, .mbar-main { background: var(--ink); background-size: auto; color: var(--paper); box-shadow: none; }
+.btn-cta:hover { transform: none; box-shadow: none; opacity: .86; }
+.btn-line { border-color: var(--line); color: var(--ink); }
+.a11y, .ftag, .t-after { background: var(--dk); color: var(--lt); }
+.ba-notes b, .ba-sketch .mk { background: var(--dk); fill: var(--dk); color: var(--lt); }
+.label { color: var(--mute); font-size: var(--fs-xs); letter-spacing: .3em; }
+.title b, .story .quote b, .about-copy .hello b, .hero h1 b { color: inherit; font-weight: 600; }
+.brow b { color: inherit; }
+.brow.alt { -webkit-text-stroke-color: var(--dk); }
+.card { box-shadow: none; border: 1px solid var(--line); background: var(--lt); }
+.film-prog .bar { background: var(--line); } .film-prog .bar i { background: var(--ink); }
+.pnl .n { background: var(--lt); color: var(--dk); }
+.qnote { border-color: var(--line); }
+.meeting .tel .ico { color: var(--lt); }
+.footer { border-top: 1px solid rgba(244, 239, 231, .14); }
+/* ===== HERO "Design" (mirrors the client's inspiration): a solid charcoal panel with a faint 01, a small label,
+   one huge serif word that crosses onto a dark photo, a short text and a small link at the bottom; on the photo a caption,
+   copper + points and a glass "next project" card; the header is an inset dark bar ===== */
+.hero.hero4 { display: grid; grid-template-columns: minmax(0, 32%) minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); justify-items: stretch; align-items: stretch; min-height: min(100svh, 900px); padding: 0; text-align: start; color: #fff; background: #2B2A29; overflow: clip; }
+.h4panel { position: relative; z-index: 2; display: flex; flex-direction: column; padding: clamp(150px, 26vh, 250px) max(var(--gutter), 46px) 52px clamp(28px, 3vw, 48px); background: #2B2A29; }
+.h4num { position: absolute; top: 24%; right: -.12em; z-index: -1; font: 600 clamp(180px, 21vw, 330px)/.8 var(--font); letter-spacing: -.04em; color: rgba(255, 255, 255, .035); pointer-events: none; direction: ltr; }
+.h4body { display: grid; gap: 14px; justify-items: start; }
+.h4label { font: 500 11.5px/1 var(--font); letter-spacing: .22em; color: #9E9994; }
+.hero.hero4 .h4word { position: relative; z-index: 3; margin: 0 0 6px; margin-inline-end: -60%; font: 400 clamp(72px, 9.6vw, 160px)/.95 'FrankRe', 'Frank Ruhl Libre', serif; letter-spacing: -.01em; color: #fff; white-space: nowrap; text-wrap: nowrap; }
+.h4lead { max-width: 16.5em; font: 400 14.5px/1.85 var(--font); color: #A8A39E; }
+.h4more { margin-top: auto; align-self: flex-start; font: 500 13px/1 var(--font); color: #E9E5E0; text-decoration: none; }
+.h4more:hover { color: #fff; text-decoration: underline; text-underline-offset: 5px; }
+.h4photo { position: relative; min-height: 100%; }
+.h4photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.5) contrast(1.1) saturate(.72); }
+.h4caption { position: absolute; top: 27%; right: 13%; display: grid; gap: 14px; font: 400 12.5px/1.9 var(--font); color: #CFCAC5; }
+.h4caption p:first-child { color: #E9E5E0; }
+.h4hs { position: absolute; z-index: 2; width: 32px; height: 32px; translate: -50% -50%; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--au); color: #fff; cursor: pointer; }
+.h4hs::before { content: "+"; font: 400 20px/1 var(--font); }
+.h4hs:hover .hs-tip, .h4hs:focus-visible .hs-tip, .h4hs.open .hs-tip { opacity: 1; }
+.h4card { position: absolute; left: clamp(20px, 5vw, 64px); bottom: clamp(40px, 9vh, 80px); z-index: 2; display: flex; align-items: center; gap: 16px; width: min(270px, 70%); padding: 8px; padding-inline-end: 14px; border-radius: 6px; background: rgba(255, 255, 255, .09); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); color: #E9E5E0; font: 400 12px/1.5 var(--font); text-decoration: none; }
+.h4card img { flex: none; width: 84px; height: 84px; object-fit: cover; border-radius: 4px; }
+.h4card b { display: block; margin-bottom: 6px; font-weight: 600; color: #fff; }
+/* the header: an inset dark bar over the hero (logo right, menu in the middle, button left), a light bar after scrolling */
+@media (min-width: 1100px) {
+  .header .wrap { display: grid; grid-template-columns: 1fr auto 1fr; }
+  .header .logo, .header .nav, .header .cta { grid-row: 1; margin-inline-start: 0; }
+  .header .logo { grid-column: 1; justify-self: start; }
+  .header .nav { grid-column: 2; justify-self: center; }
+  .header .cta { grid-column: 3; justify-self: end; }
+}
+.header { padding-top: 22px; }
+.header .wrap { width: calc(100% - 2 * clamp(16px, 2.2vw, 32px)); min-height: 78px; padding-inline: clamp(18px, 2.4vw, 34px); background: rgba(255, 255, 255, .045); border-radius: 2px; }
+.header .cta { background: transparent; color: #fff; border: 1px solid rgba(255, 255, 255, .3); }
+.header .nav > a { font: 500 13px/1 var(--font); letter-spacing: .02em; }
+@media (max-width: 980px) {
+  .hero.hero4 { grid-template-columns: minmax(0, 1fr); min-height: 0; }
+  .h4panel { padding: 130px var(--gutter) 40px; }
+  .hero.hero4 .h4word { margin-inline-end: 0; font-size: clamp(52px, 14vw, 96px); }
+  .h4more { margin-top: 26px; }
+  .h4photo { height: 62vh; min-height: 380px; }
+  .h4caption { top: 9%; right: var(--gutter); }
+}
+@media (max-width: 700px) {
+  .header { padding-top: 0; }
+  .header .wrap { width: auto; min-height: 62px; background: transparent; padding-inline: 0; }
+  .h4panel { padding-top: 104px; }
+  .h4card { left: 12px; bottom: 14px; width: auto; }
+  .h4card img { width: 60px; height: 60px; }
+}
+/* ===== HERO (luxury inspiration): dark brand brown with a warm gold glow, big light gold title crossing onto the photo,
+   a photo with info points, a glass "featured project" card and one thin gold ring ===== */
+.hero.hero3 { display: block; justify-items: normal; min-height: 0; position: relative; overflow: clip; text-align: start; color: var(--lt);
+  padding: clamp(104px, 9vw, 130px) var(--gutter) clamp(48px, 5vw, 84px);
+  background: radial-gradient(45% 55% at 24% 40%, rgba(199, 161, 108, .2), transparent 70%), radial-gradient(35% 45% at 88% 88%, rgba(199, 161, 108, .1), transparent 70%), linear-gradient(135deg, #1B130C 0%, #241A12 50%, #160F09 100%); }
+.h3ring { position: absolute; top: 70px; left: 40%; width: clamp(220px, 26vw, 380px); aspect-ratio: 1; border: 1px solid rgba(199, 161, 108, .4); border-radius: 50%; pointer-events: none; }
+.h3grid { position: relative; width: min(1320px, 100%); margin-inline: auto; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); align-items: center; gap: clamp(24px, 3vw, 48px); }
+.h3text { position: relative; z-index: 2; display: grid; gap: clamp(14px, 1.4vw, 22px); justify-items: start; }
+.h3mark { position: absolute; top: -50px; inset-inline-start: -14px; z-index: -1; width: clamp(160px, 16vw, 260px); height: auto; opacity: .06; }
+.h3label { font: 400 12px/1 var(--display); letter-spacing: .32em; color: var(--au); }
+.hero.hero3 h1 { position: relative; z-index: 3; margin-inline-end: -40%; font: 300 clamp(56px, 8.4vw, 136px)/.96 var(--display); letter-spacing: -.01em; color: var(--au-l); text-wrap: nowrap; }
+.hero.hero3 h1 span { display: block; }
+.h3lead { max-width: 30em; font-size: var(--fs-lead); line-height: 1.6; color: rgba(244, 239, 231, .8); }
+.h3actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; margin-top: 4px; }
+.h3btn { display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; background: var(--au); color: var(--dk); font: 600 15px/1 var(--font); text-decoration: none; transition: background .3s; }
+.h3btn:hover { background: var(--au-l); }
+.h3more { color: var(--lt); font: 600 14px/1 var(--font); text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 1px; }
+.h3sign { margin-top: 6px; padding-top: 14px; border-top: 1px solid rgba(244, 239, 231, .14); font: 400 12.5px/1.4 var(--font); letter-spacing: .14em; color: rgba(244, 239, 231, .62); }
+.h3photo { position: relative; aspect-ratio: 1600 / 1066; }
+.h3photo > img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; filter: brightness(.66) contrast(1.06) saturate(.9) sepia(.12); box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .75); }
+.hs { position: absolute; z-index: 2; width: 34px; height: 34px; translate: -50% -50%; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center; background: var(--au); color: var(--dk); cursor: pointer; box-shadow: 0 0 0 6px rgba(199, 161, 108, .22); }
+.hs::before { content: "+"; font: 400 22px/1 var(--font); }
+.hs-tip { position: absolute; bottom: calc(100% + 12px); left: 50%; translate: -50% 0; padding: 9px 14px; border-radius: 10px; background: rgba(43, 42, 41, .85); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--lt); font: 600 13px/1 var(--font); white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .3s; }
+.hs:hover .hs-tip, .hs:focus-visible .hs-tip, .hs.open .hs-tip { opacity: 1; }
+.h3card { position: absolute; left: 18px; bottom: 18px; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 10px; padding-inline-end: 18px; border-radius: 14px; border: 1px solid rgba(244, 239, 231, .14); background: rgba(43, 42, 41, .55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); color: var(--lt); font: 400 13px/1.45 var(--font); text-decoration: none; }
+.h3card img { width: 76px; height: 76px; object-fit: cover; border-radius: 10px; }
+.h3card b { display: block; margin-bottom: 2px; font-weight: 600; color: var(--au-l); }
+/* the header sits on the dark hero until you scroll */
+.header { background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: none; color: var(--lt); }
+.header .logo .word { filter: brightness(0) invert(94%) sepia(10%); }
+.header .nav > a::after { background: #fff; }
+
+html.menu-open .header { background: var(--lt); color: var(--dk); }
+html.menu-open .header .logo .word { filter: none; }
+@media (max-width: 980px) {
+  .h3grid { grid-template-columns: minmax(0, 1fr); }
+  .hero.hero3 h1 { margin-inline-end: 0; font-size: clamp(48px, 11vw, 80px); }
+  .h3ring { left: auto; right: -80px; top: 40px; }
+}
+@media (max-width: 700px) {
+  .hero.hero3 { padding-top: 92px; }
+  .h3label { font-size: 10px; letter-spacing: .16em; }
+  .h3card { left: 10px; bottom: 10px; padding: 7px; padding-inline-end: 12px; font-size: 12px; }
+  .h3card img { width: 54px; height: 54px; }
+  .hs { width: 28px; height: 28px; } .hs::before { font-size: 18px; }
+  .h3btn { width: 100%; justify-content: center; }
+}
+/* ===== HERO (after the kitchen-studio inspiration): light page, one rounded photo card, big light heading ===== */
+.header, .header.scrolled { background: rgba(244, 239, 231, .96); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: none; }
+.header.scrolled { box-shadow: 0 1px 0 var(--line); }
+
+.hero2 { display: block; justify-items: normal; min-height: 0; padding: 96px clamp(12px, 1.6vw, 24px) 0; background: var(--lt); text-align: start; }
+.hcard { position: relative; width: 100%; height: clamp(460px, 76vh, 760px); border-radius: 18px; overflow: clip; color: var(--lt); isolation: isolate; }
+.hmedia { position: absolute; inset: 0; z-index: -1; background: var(--dk); }
+.hmedia::after { content: ""; position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(43, 42, 41, .55) 0%, rgba(43, 42, 41, .42) 55%, rgba(43, 42, 41, .6) 100%); }
+.hcopy { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: clamp(14px, 1.6vw, 22px); padding: 24px; text-align: center; }
+.htitle { display: flex; align-items: flex-start; gap: clamp(14px, 2vw, 30px); }
+.hkick span { display: block; }
+.hkick { margin-top: .55em; font: 400 clamp(15px, 1.4vw, 22px)/1.3 var(--font); text-align: start; opacity: .92; white-space: nowrap; }
+.hero.hero2 h1 { font: 300 clamp(40px, 5.4vw, 82px)/1.04 var(--font); letter-spacing: -.01em; color: var(--lt); text-wrap: balance; }
+.hsub { font: 400 13px/1 var(--font); letter-spacing: .24em; opacity: .85; }
+.hlink { font: 600 16px/1 var(--font); color: var(--lt); text-decoration: underline; text-underline-offset: 7px; text-decoration-thickness: 1px; transition: opacity .3s; }
+.hlink:hover { opacity: .8; }
+.hbadge { position: absolute; bottom: 16px; left: 16px; display: flex; align-items: center; gap: 10px; padding: 8px 14px; border-radius: 10px; background: rgba(43, 42, 41, .62); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: var(--lt); font: 600 12px/1 var(--font); letter-spacing: .04em; text-decoration: none; }
+.hbadge img { width: 16px; height: auto; }
+.hintro { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: clamp(28px, 5vw, 90px); padding-block: clamp(44px, 5vw, 76px); }
+.hicons { display: flex; gap: clamp(18px, 2vw, 30px); color: var(--dk); }
+.hicons svg { width: clamp(40px, 3.4vw, 52px); height: auto; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+.hicons svg .fill { fill: currentColor; stroke: none; }
+.hintro p { max-width: 46em; font-size: var(--fs-lead); line-height: 1.6; color: var(--dk); }
+.js .hero2 .hcopy { opacity: 0; translate: 0 10px; transition: opacity 1s ease .2s, translate 1.1s ease .2s; }
+.js .hero2.in .hcopy { opacity: 1; translate: 0 0; }
+/* the strip: full screen width, half the old height, right under the header */
+.hero2 { padding-inline: 0; }
+.hero2 .hcard { height: clamp(240px, 38vh, 420px); border-radius: 0; }
+.hmedia::after { background: linear-gradient(180deg, rgba(43, 42, 41, .12) 0%, rgba(43, 42, 41, .28) 100%); }
+/* the type block: each line is sized to the full width (data-fit), the last row spreads the services and the button to both edges */
+.hblock { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(8px, .9vw, 14px); padding-block: clamp(26px, 3vw, 44px) clamp(30px, 3.6vw, 52px); }
+.hblock [data-fit] { margin: 0; min-width: 0; overflow: hidden; white-space: nowrap; line-height: .98; color: var(--dk); font-size: 64px; }
+.hblock [data-fit] > span { display: inline-block; }
+.hero .hblock [data-fit], .hero .hblock [data-fit] > span { white-space: nowrap; text-wrap: nowrap; }
+.hero.hero2 .hblock h1 { font-family: var(--font); font-weight: 600; letter-spacing: -.015em; color: var(--dk); }
+.hblock .hname { font-family: var(--font); font-weight: 300; letter-spacing: .01em; }
+.hrow { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: clamp(12px, 1.2vw, 18px); border-top: 1px solid var(--dk); }
+.hservices { font: 600 clamp(13px, 1.1vw, 17px)/1.3 var(--font); letter-spacing: .14em; color: var(--dk); }
+.hbtn { flex: none; }
+.hintro { border-top: 1px solid var(--line); }
+@media (max-width: 700px) {
+  .hero2 .hcard { height: 34svh; min-height: 210px; }
+  .hrow { flex-direction: column; align-items: stretch; text-align: center; }
+  .hbtn { width: 100%; }
+}
+@media (max-width: 700px) {
+  .hero2 { padding-top: 74px; }
+  .hcard { height: 74svh; min-height: 460px; border-radius: 14px; }
+  .htitle { flex-direction: column; align-items: center; gap: 10px; }
+  .hkick { margin: 0; text-align: center; white-space: normal; }
+  .hkick span { display: inline; } .hkick span + span::before { content: "· "; }
+  .hero.hero2 h1 { font-size: 42px; }
+  .hsub { font-size: 11px; letter-spacing: .14em; }
+  .hintro { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 22px; }
+}
+
+.mbar { background: rgba(244, 239, 231, .94); }
+/* ---- type: smaller, one scale ---- */
+.title { font-size: var(--fs-h2); line-height: 1.15; }
+.hero h1 { font-size: var(--fs-h1); line-height: 1.25; }
+.cutbox { width: min(980px, 84vw); }
+.cut-lines { font-size: 13px; letter-spacing: .3em; }
+.lead, .story .st-sub { font-size: var(--fs-lead); }
+.story .quote { font-size: clamp(26px, 2.2vw, 38px); }
+.points h3 { font-size: 17px; } .points p { font-size: 16px; }
+.card .n { font-size: clamp(36px, 3vw, 52px); } .card h3 { font-size: var(--fs-h3); } .card p { font-size: 16px; }
+.pnl h3 { font-size: clamp(22px, 1.8vw, 30px); } .pnl .vt { font-size: 18px; } .pnl p { font-size: 15.5px; }
+.about-copy .hello { font-size: clamp(28px, 2.4vw, 40px); } .about-copy .big { font-size: clamp(17px, 1.3vw, 21px); }
+.band { font-size: clamp(40px, 6vw, 96px); }
+.qtext blockquote { font-size: clamp(20px, 1.7vw, 28px); min-height: 0; }
+.tcard b { font-size: clamp(20px, 1.8vw, 30px); }
+.ba-notes h3 { font-size: 16px; } .ba-notes p { font-size: 14.5px; }
+.nav > a { font-size: 13px; }
+/* ---- motion: calm and short ---- */
+.js [data-split] .w > span { translate: 0 0; rotate: 0deg; transition: none; }
+.js [data-split] { opacity: 0; translate: 0 10px; transition: opacity .7s ease, translate .8s ease; }
+.js [data-split].in { opacity: 1; translate: 0 0; }
+.js .rise { translate: 0 12px; filter: none; transition: opacity .7s ease, translate .8s ease; }
+.js .reveal { clip-path: none; opacity: 0; transition: opacity .8s ease; }
+.js .reveal.in { clip-path: none; opacity: 1; }
+.js .reveal img { scale: 1; }
+.js .hero .cut-lines span:nth-child(n), .js .hero .hero-foot { transition-delay: .5s; }
+@keyframes kb { from { transform: scale(1.06); } to { transform: scale(1.01); } }
+@keyframes kb2 { from { transform: scale(1.01); } to { transform: scale(1.06); } }
+@keyframes f-push { from { transform: scale(1.02); } to { transform: scale(1.07); } }
+@keyframes f-pan { from { transform: scale(1.06); } to { transform: scale(1.06); } }
+@keyframes f-detail { from { transform: scale(1.75); } to { transform: scale(1.82); } }
+.ba-sketch .dash, .ba-sketch .n.on .dash { animation: none; }
+.ba-sketch .n.on .ring { animation: none; }
+.pnl { transition: flex .7s ease; }
+.sm, .sm img { transition-duration: 1s; }
+.qstage.playing .qthumbs .on i span { animation-duration: 8s; }
+.about-frame { clip-path: inset(0 round 28px); }
+@media (max-width: 700px) {
+  .title { font-size: 26px; } .hero h1 { font-size: 22px; }
+  .cutbox { width: 94vw; }
+  .story .quote { font-size: 26px; } .about-copy .hello { font-size: 28px; }
+  .band { font-size: 13vw; }
+  .card .n { font-size: 32px; } .card h3 { font-size: 20px; }
+  .cut-lines { font-size: 11px; letter-spacing: .1em; gap: 8px; white-space: nowrap; }
+  .cut-lines span + span::before { margin-inline-end: 8px; }
+}
+/* ===== round 10: one header for the whole page, a prominent meeting button, name + title in the hero ===== */
+/* the header never changes: the same inset charcoal bar from the top of the page to the bottom */
+.header, .header.scrolled { background: transparent; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; color: #fff; padding-top: 18px; }
+.header .wrap { width: calc(100% - 2 * clamp(16px, 2.2vw, 32px)); min-height: 74px; padding-inline: clamp(18px, 2.4vw, 34px); background: rgba(43, 42, 41, .94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-radius: 2px; box-shadow: 0 10px 30px -18px rgba(0, 0, 0, .5); }
+.header .logo .word { filter: brightness(0) invert(94%) sepia(10%); }
+.header .nav > a { color: #fff; }
+/* the meeting button stands out: solid copper, bold, a soft glow */
+.header .cta, html.bar-on .header .cta { background: var(--au); color: #fff; border: 0; font-weight: 700; box-shadow: 0 10px 22px -10px rgba(208, 122, 63, .8); }
+.header .cta:hover { background: var(--au-l); opacity: 1; }
+.h4sub { font: 300 clamp(20px, 1.9vw, 30px)/1.2 var(--font); letter-spacing: .02em; color: #D8D3CE; }
+.h4body { gap: 18px; }
+.h4btn { display: inline-flex; align-items: center; gap: .7em; min-height: 60px; margin-top: 18px; padding: 0 34px; border-radius: 999px; background: var(--au); color: #fff; font: 700 17px/1 var(--font); text-decoration: none; box-shadow: 0 16px 34px -14px rgba(208, 122, 63, .9); transition: background .3s; }
+.h4btn:hover { background: var(--au-l); }
+.h4btn span { transition: translate .3s; } .h4btn:hover span { translate: -4px 0; }
+.h4panel { justify-content: center; padding-bottom: 80px; }
+/* ===== round 11: one pastel colour for every call to action, a professional display face for the name ===== */
+:root { --au: #E7B999; --au-l: #F0CBB0; --au-ink: #2B2A29; }
+.btn-cta, .mbar-main, .header .cta, html.bar-on .header .cta, .h4btn, .meeting .btn-cta, .process .btn-cta, .social .btn-cta, .footer .btn-cta {
+  background: var(--au); color: var(--au-ink); border: 0; font-weight: 700; box-shadow: 0 12px 26px -14px rgba(160, 110, 80, .55); }
+.btn-cta:hover, .mbar-main:hover, .header .cta:hover, .h4btn:hover { background: var(--au-l); color: var(--au-ink); opacity: 1; }
+.h4hs { background: var(--au); color: var(--au-ink); }
+.hero.hero4 .h4word { font-family: 'OliviaDisplay', 'FrankRe', serif; font-weight: 300; letter-spacing: 0; }
+.h4svc { display: flex; flex-wrap: wrap; gap: 6px 0; font: 500 13px/1 var(--font); letter-spacing: .2em; color: #BDB7B1; }
+.h4svc span + span::before { content: "·"; margin-inline: .7em; color: var(--au); }
+/* hero: a gentle first entrance, then a quiet scroll (the photo drifts and zooms a touch, the name slides into it) */
+.js .hero4 .h4body > * { opacity: 0; translate: 0 14px; transition: opacity .9s ease, translate 1s ease; }
+.js .hero4.in .h4body > * { opacity: 1; translate: 0 0; }
+.js .hero4.in .h4body > :nth-child(2) { transition-delay: .12s; } .js .hero4.in .h4body > :nth-child(3) { transition-delay: .22s; } .js .hero4.in .h4body > :nth-child(4) { transition-delay: .32s; }
+.hero4 .h4photo > img, .hero4 .h4word, .hero4 .h4num { will-change: transform; }
+/* the phone menu sheet stays light with dark links under the dark bar */
+.nav.open { color: var(--dk); }
+.nav.open > a { color: var(--dk); }
+html.menu-open .header, html.menu-open .header.scrolled { background: transparent; color: #fff; }
+html.menu-open .header .logo .word { filter: brightness(0) invert(94%) sepia(10%); }
+@media (max-width: 700px) {
+  .header, .header.scrolled { padding-top: 10px; }
+  .header .wrap { width: calc(100% - 20px); min-height: 60px; padding-inline: 12px; }
+  .h4btn { width: 100%; justify-content: center; }
+}/* ===== round 12 ===== */
+/* the hero name and title in the page's display face (Gloria), bold */
+.hero.hero4 .h4word { font-family: var(--display); font-weight: 700; letter-spacing: -.01em; font-size: clamp(56px, 7.4vw, 124px); }
+.h4sub { font-family: var(--display); font-weight: 600; color: #F1EDE8; }
+/* buttons: white text on the pastel */
+.btn-cta, .mbar-main, .header .cta, html.bar-on .header .cta, .h4btn, .meeting .btn-cta, .process .btn-cta, .social .btn-cta, .footer .btn-cta,
+.btn-cta:hover, .mbar-main:hover, .header .cta:hover, .h4btn:hover { color: #fff; text-shadow: 0 1px 2px rgba(120, 70, 40, .35); }
+.h4hs { color: #fff; }
+/* "החלום שלכם": bold titles */
+.story .quote, .story .quote b { font-weight: 600; }
+.points h3 { font-weight: 700; }
+/* the process title was too big */
+.process .title { font-size: clamp(24px, 2vw, 34px); line-height: 1.2; }
+@media (max-width: 700px) { .hero.hero4 .h4word { font-size: clamp(34px, 10vw, 60px); } .process .title { font-size: 24px; } }/* ===== round 13 ===== */
+/* scroll progress: a thin line along the bottom of the header bar that fills as you read */
+.header .wrap { position: relative; }
+.sprog { position: absolute; inset-inline: 0; bottom: 0; height: 2px; overflow: hidden; pointer-events: none; }
+.sprog i { display: block; height: 100%; background: var(--au); transform: scaleX(var(--sp, 0)); transform-origin: right; }
+/* hero services: four thin square tiles, a tap (or hover) shows the photo of that service, like the project panels */
+.h4tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; width: min(100%, 340px); }
+.h4t { position: relative; aspect-ratio: 1; padding: 6px; border: 1px solid rgba(255, 255, 255, .22); border-radius: 4px; overflow: hidden; display: grid; place-items: end center; background: transparent; color: #E9E5E0; font: 600 11.5px/1.25 var(--font); text-align: center; cursor: pointer; isolation: isolate; transition: border-color .4s; }
+.h4t::before { content: ""; position: absolute; inset: 0; z-index: -2; background: var(--img) center / cover no-repeat; opacity: 0; transform: scale(1.08); transition: opacity .5s ease, transform .8s ease; }
+.h4t::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(43, 42, 41, 0) 30%, rgba(43, 42, 41, .82) 100%); opacity: 0; transition: opacity .5s ease; }
+.h4t span { display: block; }
+.h4t:hover { border-color: rgba(255, 255, 255, .5); }
+.h4t.on { border-color: var(--au); color: #fff; }
+.h4t.on::before { opacity: 1; transform: scale(1); }
+.h4t.on::after { opacity: 1; }
+.h4t:focus-visible { outline: 1.5px solid var(--au); outline-offset: 3px; }
+@media (max-width: 980px) { .h4tiles { width: min(100%, 420px); } .h4t { font-size: 12.5px; } }/* ===== round 14: the hero services as thin tall strips, the same idea as the tracks panels ===== */
+.h4strips { display: flex; gap: 6px; width: min(340px, calc(32vw - 112px)); height: clamp(170px, 24vh, 240px); }
+.h4s { position: relative; flex: 1; min-width: 0; padding: 0; border: 1px solid rgba(255, 255, 255, .22); border-radius: 6px; overflow: hidden; isolation: isolate; background: transparent; color: #E9E5E0; cursor: pointer; transition: flex .7s ease, border-color .4s; }
+.h4s.on { flex: 3.4; border-color: var(--au); cursor: default; }
+.h4s::before { content: ""; position: absolute; inset: 0; z-index: -2; background: var(--img) center / cover no-repeat; opacity: 0; transform: scale(1.06); transition: opacity .6s ease, transform .9s ease; }
+.h4s::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(43, 42, 41, .1) 30%, rgba(43, 42, 41, .85) 100%); opacity: 0; transition: opacity .6s ease; }
+.h4s.on::before { opacity: 1; transform: scale(1); }
+.h4s.on::after { opacity: 1; }
+.h4s:hover:not(.on) { border-color: rgba(255, 255, 255, .5); }
+.h4s .vt { position: absolute; bottom: 14px; left: 50%; translate: -50% 0; writing-mode: vertical-rl; font: 600 13.5px/1 var(--font); letter-spacing: .04em; white-space: nowrap; transition: opacity .35s; }
+.h4s.on .vt { opacity: 0; }
+.h4s .lb { position: absolute; inset-inline: 12px; bottom: 12px; font: 700 15px/1.2 var(--font); color: #fff; text-align: start; opacity: 0; translate: 0 8px; transition: opacity .4s .25s, translate .5s .25s ease; }
+.h4s.on .lb { opacity: 1; translate: 0 0; }
+.h4s:focus-visible { outline: 1.5px solid var(--au); outline-offset: 3px; }
+@media (max-width: 980px) { .h4strips { width: 100%; height: 200px; } }/* ===== round 15: the review thumbnails become thin strips, the same idea as the tracks and the hero services ===== */
+.qthumbs { display: flex; flex-wrap: nowrap; gap: 6px; width: 100%; max-width: 560px; height: clamp(150px, 16vw, 200px); }
+.qthumbs button { position: relative; flex: 1; min-width: 0; width: auto; aspect-ratio: auto; height: 100%; padding: 0; border: 1px solid rgba(43, 42, 41, .2); border-radius: 6px; overflow: hidden; isolation: isolate; background: transparent; color: var(--dk); opacity: 1; transform: none; cursor: pointer; transition: flex .7s ease, border-color .4s; }
+.qthumbs button.on { flex: 3.4; border-color: var(--au); transform: none; cursor: default; }
+.qthumbs button::before { content: ""; position: absolute; inset: 0; z-index: -2; background: var(--img) center / cover no-repeat; opacity: 0; transform: scale(1.06); transition: opacity .6s ease, transform .9s ease; }
+.qthumbs button::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(43, 42, 41, .05) 35%, rgba(43, 42, 41, .78) 100%); opacity: 0; transition: opacity .6s ease; }
+.qthumbs button.on::before { opacity: 1; transform: scale(1); }
+.qthumbs button.on::after { opacity: 1; }
+.qthumbs button:hover:not(.on) { border-color: rgba(43, 42, 41, .45); }
+.qthumbs .vt { position: absolute; bottom: 14px; left: 50%; translate: -50% 0; writing-mode: vertical-rl; font: 600 13px/1 var(--font); letter-spacing: .03em; white-space: nowrap; transition: opacity .35s; }
+.qthumbs .on .vt { opacity: 0; }
+.qthumbs .lb { position: absolute; inset-inline: 12px; bottom: 16px; font: 700 13.5px/1.3 var(--font); color: #fff; text-align: start; opacity: 0; transition: opacity .4s .25s; }
+.qthumbs .on .lb { opacity: 1; }
+.qthumbs i { inset-inline: 12px; bottom: 7px; }
+.qthumbs img { display: none; }
+@media (max-width: 700px) { .qthumbs { max-width: none; height: 160px; } .qthumbs button { width: auto; border-radius: 6px; } }/* ===== round 16: the hero photo changes by itself (soft crossfade with a slow zoom), small dashes show which one ===== */
+.h4slides { position: absolute; inset: 0; overflow: hidden; will-change: transform; }
+.h4sl { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.5) contrast(1.1) saturate(.72); opacity: 0; transform: scale(1.1); transition: opacity 1.6s ease, transform 7s linear; }
+.h4sl.on { opacity: 1; transform: scale(1); z-index: 1; }
+.h4hs { transition: opacity .6s ease; }
+.h4photo:not(.s0) .h4hs { opacity: 0; pointer-events: none; }
+.h4dots { position: absolute; z-index: 3; left: clamp(20px, 3vw, 40px); bottom: clamp(20px, 4vh, 36px); display: flex; gap: 6px; }
+.h4dots i { width: 16px; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, .35); transition: width .6s ease, background .6s ease; }
+.h4dots i.on { width: 38px; background: var(--au); }
+@media (prefers-reduced-motion: reduce) { .h4sl { transition: opacity .6s ease; transform: none !important; } }/* ===== round 17: every button is an outline: a thin, clear frame and no fill ===== */
+.btn-cta, .mbar-main, .header .cta, html.bar-on .header .cta, .h4btn, .meeting .btn-cta, .process .btn-cta, .social .btn-cta, .footer .btn-cta, .tracks .btn-cta, .about .btn-cta, .story .btn-cta, .reviews .btn-cta {
+  background: transparent; border: 1.5px solid var(--dk); color: var(--dk); box-shadow: none; text-shadow: none; font-weight: 700; }
+.btn-cta:hover, .mbar-main:hover, .h4btn:hover, .tracks .btn-cta:hover, .about .btn-cta:hover { background: rgba(43, 42, 41, .06); color: var(--dk); }
+/* on the dark parts of the page (header bar, hero panel, process, video wall, meeting, footer) the frame is the pastel and the text is light */
+.header .cta, html.bar-on .header .cta, .hero4 .h4btn, .process .btn-cta, .social .btn-cta, .meeting .btn-cta, .footer .btn-cta { border-color: var(--au); color: #fff; background: transparent; }
+.header .cta:hover, .hero4 .h4btn:hover, .process .btn-cta:hover, .social .btn-cta:hover, .meeting .btn-cta:hover, .footer .btn-cta:hover { background: rgba(231, 185, 153, .14); color: #fff; }
+.mbar-main { border-width: 1.5px; }/* ===== round 18: on hover a second line runs around the button and closes its frame ===== */
+@property --ring { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.btn-cta, .mbar-main, .header .cta, .h4btn { position: relative; isolation: isolate; }
+.btn-cta::after, .mbar-main::after, .header .cta::after, .h4btn::after {
+  content: ""; position: absolute; inset: -1.5px; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from 90deg, var(--ring-c, #C98E64) var(--ring), transparent 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  --ring: 0deg; transition: --ring .75s cubic-bezier(.65, 0, .35, 1); }
+.btn-cta:hover::after, .mbar-main:hover::after, .header .cta:hover::after, .h4btn:hover::after,
+.btn-cta:focus-visible::after, .header .cta:focus-visible::after, .h4btn:focus-visible::after { --ring: 360deg; }
+/* the drawing line: deep copper on light parts, white on the dark parts */
+.header .cta, .hero4 .h4btn, .process .btn-cta, .social .btn-cta, .meeting .btn-cta, .footer .btn-cta { --ring-c: #fff; }
+.btn-cta .arr, .h4btn span, .header .cta .arr { display: inline-block; transition: translate .5s cubic-bezier(.65, 0, .35, 1); }
+.btn-cta:hover .arr, .h4btn:hover span, .header .cta:hover .arr { translate: -5px 0; }
+@media (prefers-reduced-motion: reduce) { .btn-cta::after, .mbar-main::after, .header .cta::after, .h4btn::after { transition: none; } }/* ===== round 19: on hover the button stays empty, and the frame gets a little thicker ===== */
+.btn-cta:hover, .mbar-main:hover, .header .cta:hover, html.bar-on .header .cta:hover, .h4btn:hover,
+.tracks .btn-cta:hover, .about .btn-cta:hover, .process .btn-cta:hover, .social .btn-cta:hover, .meeting .btn-cta:hover, .footer .btn-cta:hover, .hero4 .h4btn:hover, .nav .btn-cta:hover { background: transparent; box-shadow: none; }
+.btn-cta::after, .mbar-main::after, .header .cta::after, .h4btn::after { transition: --ring .75s cubic-bezier(.65, 0, .35, 1), padding .35s ease, inset .35s ease; }
+.btn-cta:hover::after, .mbar-main:hover::after, .header .cta:hover::after, .h4btn:hover::after,
+.btn-cta:focus-visible::after, .header .cta:focus-visible::after, .h4btn:focus-visible::after { padding: 3px; inset: -2.5px; }/* ===== round 20: no section labels, a longer hero subtitle, the meeting as one big card-button ===== */
+.h4sub { max-width: 19em; font: 600 clamp(17px, 1.35vw, 21px)/1.45 var(--display); color: #F1EDE8; }
+.mcard { position: relative; isolation: isolate; display: grid; justify-items: center; gap: 18px; max-width: 780px; margin-inline: auto; padding: clamp(36px, 4.6vw, 66px) clamp(22px, 4vw, 64px); border: 1.5px solid var(--au); border-radius: 22px; color: #fff; text-align: center; text-decoration: none; cursor: pointer; }
+.mcard .mark { width: 48px; height: auto; margin: 0; }
+.mcard .title { color: #fff; margin: 0; }
+.mlead { max-width: 34em; font-size: var(--fs-lead); line-height: 1.6; color: rgba(242, 242, 242, .76); }
+.mgo { display: inline-flex; align-items: center; gap: .7em; margin-top: 8px; padding-bottom: 6px; border-bottom: 1px solid currentColor; font: 700 16px/1 var(--font); color: var(--au); }
+.mgo .arr { display: inline-block; transition: translate .5s cubic-bezier(.65, 0, .35, 1); }
+.mcard:hover .mgo .arr { translate: -6px 0; }
+/* the same frame-closing line as the buttons, around the whole card */
+.mcard::after { content: ""; position: absolute; inset: -1.5px; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from 90deg, #fff var(--ring), transparent 0);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  --ring: 0deg; transition: --ring 1s cubic-bezier(.65, 0, .35, 1), padding .35s ease, inset .35s ease; }
+.mcard:hover::after, .mcard:focus-visible::after { --ring: 360deg; padding: 3px; inset: -2.5px; }
+.mcard:focus-visible { outline: none; }
+.meeting .mtel { display: inline-flex; margin-top: 26px; }
+@media (max-width: 700px) { .mcard { border-radius: 16px; } }/* ===== round 21: one typeface for the whole page (Gloria, the face of the titles and the name) ===== */
+:root { --font: 'Gloria', 'Ploni', system-ui, sans-serif; --display: 'Gloria', 'Ploni', system-ui, sans-serif; }
+body, button, input, select, textarea { font-family: var(--font); }
+.hero.hero4 .h4word { font-family: var(--font); }
+/* the meeting card: on hover a gradient in the page's own colours fills it from the bottom up */
+.mcard { overflow: hidden; transition: color .4s ease; }
+.mcard::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit;
+  background: linear-gradient(135deg, #E7B999 0%, #C98E64 42%, #6E5546 78%, #2B2A29 100%);
+  clip-path: inset(100% 0 0 0 round 22px); transition: clip-path .8s cubic-bezier(.65, 0, .35, 1); }
+.mcard:hover::before, .mcard:focus-visible::before { clip-path: inset(0 0 0 0 round 22px); }
+.mcard:hover .mgo, .mcard:focus-visible .mgo { color: #fff; }
+.mcard:hover .mlead, .mcard:focus-visible .mlead { color: rgba(255, 255, 255, .92); }
+.mcard::after { z-index: 1; }
+@media (prefers-reduced-motion: reduce) { .mcard::before { transition: none; } }/* ===== round 22: the card's gradient runs right to left, in light browns only (no black) ===== */
+.mcard::before { background: linear-gradient(270deg, #F0CBB0 0%, #E7B999 30%, #D4A27C 62%, #B9865F 100%); clip-path: inset(0 0 0 100% round 22px); }
+.mcard:hover::before, .mcard:focus-visible::before { clip-path: inset(0 0 0 0 round 22px); }
+.mcard:hover .title, .mcard:hover .title b, .mcard:hover .mgo, .mcard:focus-visible .title, .mcard:focus-visible .mgo { color: #fff; text-shadow: 0 1px 10px rgba(110, 70, 40, .35); }
+.mcard:hover .mlead, .mcard:focus-visible .mlead { color: #fff; text-shadow: 0 1px 8px rgba(110, 70, 40, .3); }/* ===== round 24: on the filled card, "הפרויקט שלכם" and the card's call to action turn the brand grey ===== */
+.mcard:hover .title b, .mcard:focus-visible .title b, .mcard:hover .mgo, .mcard:focus-visible .mgo { color: #2B2A29; text-shadow: none; }
+.mcard:hover .mgo, .mcard:focus-visible .mgo { border-bottom-color: #2B2A29; }</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- Lucide icons (ISC license) -->
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.2-4.1A8.6 8.6 0 1 1 8 19.6z"/><path d="M9.2 8.6c.3-.6.6-.6.9-.6h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.3.3.5 0 .7-.4 1.6-1.4 1.8-1 .2-2.6-.2-4.3-1.7-1.6-1.4-2.4-3.1-2.5-4-.1-.6.1-1.4.3-1.9z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
+    <symbol id="wa-logo" viewBox="0 0 32 32"><path fill="#25D366" d="M16 3C8.8 3 3 8.8 3 16c0 2.3.6 4.5 1.7 6.5L3 29l6.7-1.7c1.9 1 4 1.6 6.3 1.6 7.2 0 13-5.8 13-13S23.2 3 16 3z"/><path fill="#fff" d="M23.2 19.3c-.4-.2-2.3-1.1-2.6-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.5-.2.3-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.9-2.1-1.2-2.9-.3-.8-.6-.7-.9-.7h-.7c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.7 4.2 6.6 5.8 3.3 1.3 3.9 1 4.6.9.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.3-.7-.5z"/></symbol>
+    <!-- carved into light paper: a warm inner shadow from the top edge and a thin bright lip at the bottom -->
+    <filter id="carve" x="-10%" y="-10%" width="120%" height="120%">
+      <feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+      <feOffset in="inv" dx="9" dy="14" result="off"/><feGaussianBlur in="off" stdDeviation="8" result="blur"/>
+      <feFlood flood-color="#3A2C1E" flood-opacity=".7"/><feComposite in2="blur" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="inner"/>
+      <feOffset in="inv" dx="-2" dy="-3" result="off2"/><feGaussianBlur in="off2" stdDeviation="1" result="blur2"/>
+      <feFlood flood-color="#FFFFFF" flood-opacity=".7"/><feComposite in2="blur2" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="lip"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="inner"/><feMergeNode in="lip"/></feMerge>
+    </filter>
+    <filter id="carve-deep" x="-10%" y="-10%" width="120%" height="120%">
+      <feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+      <feOffset in="inv" dx="14" dy="24" result="off"/><feGaussianBlur in="off" stdDeviation="14" result="blur"/>
+      <feFlood flood-color="#3A2C1E" flood-opacity=".62"/><feComposite in2="blur" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="inner"/>
+      <feOffset in="inv" dx="5" dy="8" result="off3"/><feGaussianBlur in="off3" stdDeviation="2" result="blur3"/>
+      <feFlood flood-color="#2A1F15" flood-opacity=".35"/><feComposite in2="blur3" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="edge"/>
+      <feOffset in="inv" dx="-3" dy="-4" result="off2"/><feGaussianBlur in="off2" stdDeviation="1.2" result="blur2"/>
+      <feFlood flood-color="#FFFFFF" flood-opacity=".85"/><feComposite in2="blur2" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="lip"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="inner"/><feMergeNode in="edge"/><feMergeNode in="lip"/></feMerge>
+    </filter>
+    <!-- the same carve, shadows only (laid over the hero film) -->
+    <filter id="carve-ov" x="-10%" y="-10%" width="120%" height="120%">
+      <feComponentTransfer in="SourceAlpha" result="inv"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+      <feOffset in="inv" dx="14" dy="24" result="off"/><feGaussianBlur in="off" stdDeviation="14" result="blur"/>
+      <feFlood flood-color="#3A2C1E" flood-opacity=".62"/><feComposite in2="blur" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="inner"/>
+      <feOffset in="inv" dx="5" dy="8" result="off3"/><feGaussianBlur in="off3" stdDeviation="2" result="blur3"/>
+      <feFlood flood-color="#2A1F15" flood-opacity=".35"/><feComposite in2="blur3" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="edge"/>
+      <feOffset in="inv" dx="-3" dy="-4" result="off2"/><feGaussianBlur in="off2" stdDeviation="1.2" result="blur2"/>
+      <feFlood flood-color="#FFFFFF" flood-opacity=".85"/><feComposite in2="blur2" operator="in"/><feComposite in2="SourceAlpha" operator="in" result="lip"/>
+      <feMerge><feMergeNode in="inner"/><feMergeNode in="edge"/><feMergeNode in="lip"/></feMerge>
+    </filter>
+    <!-- the hero words as a clip for the film (bounding-box units, drawn in a 2800×800 space) -->
+    <clipPath id="hclipBB" clipPathUnits="userSpaceOnUse">
+      <text id="hc1" x="1400" y="352" text-anchor="middle" font-family="Gloria, sans-serif" font-weight="700" font-size="500">INSIDE</text>
+      <text id="hc2" x="1400" y="770" text-anchor="middle" font-family="Gloria, sans-serif" font-weight="700" font-size="500">STORY</text>
+    </clipPath>
+  </defs>
+</svg>
+
+<header class="header">
+  <div class="wrap">
+    <button class="burger" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+    <a class="logo" href="#top" aria-label="Inside Story, שרה ישראלי, לראש העמוד">
+      <img class="mark" src="img/logo-mark.png" alt="" width="226" height="276"><img class="word" src="img/logo-word.png" alt="Inside Story" width="610" height="195">
+    </a>
+    <nav class="nav" id="nav" aria-label="ניווט ראשי">
+      <span class="sheet-kicker label">MENU</span>
+      <a href="#tracks">שירותים ופרויקטים</a>
+      <a href="#process">מהשיחה עד סיום הפרויקט</a>
+      <a href="#about">קצת עליי</a>
+      <a href="#reviews">לקוחות ממליצים</a>
+      <div class="sheet-foot">
+        <a class="btn btn-cta" href="#meeting">לפגישת ייעוץ אישית <span class="arr">←</span></a>
+        <div class="sheet-row">
+          <a class="sheet-tel" href="tel:+972546677489">054-667-7489</a>
+          <div class="soc"><a href="#" aria-label="אינסטגרם"><svg class="ico"><use href="#i-insta"/></svg></a><a href="#" aria-label="פייסבוק"><svg class="ico"><use href="#i-fb"/></svg></a></div>
+        </div>
+        <div class="sheet-legal"><a href="#">תקנון האתר</a><a href="#">הצהרת נגישות</a><a href="#">מדיניות פרטיות</a></div>
+      </div>
+    </nav>
+    <span class="sprog" aria-hidden="true"><i></i></span>
+    <a class="btn btn-cta btn-sm cta" href="#meeting"><span>לפגישה<span class="m-hide"> אישית</span></span><span class="arr">←</span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero hero4" aria-labelledby="hero-title">
+    <div class="h4panel">
+      <div class="h4body">
+        <h1 id="hero-title" class="h4word">שרה ישראלי</h1>
+        <p class="h4sub">ליווי אישי לפרויקט שלכם, מעיצוב פנים עד קבלת המפתח</p>
+        <div class="h4strips" aria-label="השירותים">
+          <button class="h4s on" type="button" aria-label="תכנון אדריכלי" style="--img:url('img/svc-plans.jpg')"><span class="vt" aria-hidden="true">תכנון אדריכלי</span><span class="lb">תכנון אדריכלי</span></button>
+          <button class="h4s" type="button" aria-label="עיצוב" style="--img:url('img/sp-bath.jpg')"><span class="vt" aria-hidden="true">עיצוב</span><span class="lb">עיצוב</span></button>
+          <button class="h4s" type="button" aria-label="פיקוח" style="--img:url('img/frame-reno.jpg')"><span class="vt" aria-hidden="true">פיקוח</span><span class="lb">פיקוח</span></button>
+          <button class="h4s" type="button" aria-label="ליווי" style="--img:url('img/svc-materials.jpg')"><span class="vt" aria-hidden="true">ליווי</span><span class="lb">ליווי</span></button>
+        </div>
+        <a class="h4btn" href="#meeting">לפגישת ייעוץ אישית <span aria-hidden="true">←</span></a>
+      </div>
+    </div>
+    <div class="h4photo">
+      <div class="h4slides" id="h4slides" role="img" aria-label="תמונות מתחלפות מפרויקטים של שרה ישראלי">
+        <img class="h4sl on" src="img/sp-library2.jpg" alt="סלון וספרייה: ספרייה מוארת בעץ, ספה בהירה וכורסה ירוקה" width="1600" height="1066">
+        <img class="h4sl" src="img/sp-kitchen.jpg" alt="מטבח בגווני חול ועץ עם בר ישיבה" width="1600" height="1066" loading="lazy">
+        <img class="h4sl" src="img/sp-dining.jpg" alt="פינת אוכל פתוחה למטבח" width="1600" height="1066" loading="lazy">
+        <img class="h4sl" src="img/sp-bath.jpg" alt="חדר רחצה בשיש בהיר עם אביזרי נחושת" width="1600" height="1066" loading="lazy">
+        <img class="h4sl" src="img/sp-library.jpg" alt="ספרייה מוארת ופינת ישיבה" width="1600" height="1066" loading="lazy">
+        <img class="h4sl" src="img/ba-after.jpg" alt="מטבח אחרי שיפוץ מאפס" width="1600" height="1066" loading="lazy">
+      </div>
+      <div class="h4dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="h4hs" type="button" style="left:24%;top:31%" aria-label="ספרייה בעץ אגוז"><span class="hs-tip">ספרייה בעץ אגוז עם תאורה נסתרת</span></button>
+      <button class="h4hs" type="button" style="left:66%;top:57%" aria-label="ספה וכריות עור"><span class="hs-tip">ספה בקטיפה בהירה וכריות עור</span></button>
+    </div>
+  </section>
+
+  <!-- ============ TRACKS ============ -->
+  <section class="section tracks" id="tracks" aria-labelledby="t-title">
+    <div class="wrap">
+      <div class="head split">
+        <div><h2 class="title" data-split id="t-title">ארבעה מסלולים,<br><b>פרויקט אחד</b></h2></div>
+        <div class="lead rise"><p>יושבים יחד על הצרכים המשפחתיים שלכם, ובוחרים בשבילכם את המסלול המדויק עבורכם.</p>
+          <a class="btn btn-cta wa-cta" data-msg="היי שרה, אשמח שנשב יחד ונבחר את המסלול שמתאים לנו" href="#meeting">לבחירת המסלול שלכם <span class="arr">←</span></a></div>
+      </div>
+      <div class="panels rise" id="panels">
+        <article class="pnl on" tabindex="0"><img src="img/sp-library.jpg" alt="" loading="lazy"><span class="n">1</span><span class="vt" aria-hidden="true">שיפוץ מאפס</span>
+          <div class="body"><h3>שיפוץ מאפס</h3><p>מהקירות ועד הכרית האחרונה: אבחון צרכים, סט תוכניות מלא, מטבח, נגרות ומקלחות, ליווי בחירות ופיקוח.</p><a class="tlink wa-cta" data-msg="היי שרה, אשמח לפרטים על מסלול שיפוץ מאפס" href="#meeting">לפרטים בוואטסאפ <span>←</span></a></div></article>
+        <article class="pnl" tabindex="0"><img src="img/sp-dining.jpg" alt="" loading="lazy"><span class="n">2</span><span class="vt" aria-hidden="true">שיפוץ קוסמטי חיצוני</span>
+          <div class="body"><h3>שיפוץ קוסמטי חיצוני</h3><p>רענון חזית, חומרים וצבעים, בלי לפרק את הקיים. פלטה, בחירה אצל ספקים וליווי בביצוע.</p><a class="tlink wa-cta" data-msg="היי שרה, אשמח לפרטים על שיפוץ קוסמטי חיצוני" href="#meeting">לפרטים בוואטסאפ <span>←</span></a></div></article>
+        <article class="pnl" tabindex="0"><img src="img/trk-plans.jpg" alt="" loading="lazy"><span class="n">3</span><span class="vt" aria-hidden="true">תכנון תוכניות ביצוע</span>
+          <div class="body"><h3>תכנון תוכניות ביצוע</h3><p>תוכניות מדויקות שתוכלו למסור לכל קבלן: הריסה, בנייה, חשמל, אינסטלציה, תקרות, ריצוף ואלומיניום.</p><a class="tlink wa-cta" data-msg="היי שרה, אשמח לפרטים על תכנון תוכניות ביצוע" href="#meeting">לפרטים בוואטסאפ <span>←</span></a></div></article>
+        <article class="pnl" tabindex="0"><img src="img/trk-supervise.jpg" alt="" loading="lazy"><span class="n">4</span><span class="vt" aria-hidden="true">ליווי ופיקוח בנייה</span>
+          <div class="body"><h3>ליווי ופיקוח בנייה</h3><p>עיניים מקצועיות בשטח, מול הקבלן ובעלי המקצוע: ביקורים שוטפים, תיאום מערכות וזמינות בוואטסאפ.</p><a class="tlink wa-cta" data-msg="היי שרה, אשמח לפרטים על ליווי ופיקוח בנייה" href="#meeting">לפרטים בוואטסאפ <span>←</span></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES: taken off the page for now (Sara's request); restore by moving it back out of the template -->
+  <template id="services-later">
+  <!-- ============ SERVICES ============ -->
+  <section class="section services" id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="head split">
+        <div><h2 class="title" data-split id="svc-title">שירותים</h2></div>
+        <p class="lead rise">מתכננת נכון, מלווה עד הסוף: שלושה תחומים שעובדים יחד, כדי שמה שתכננו על הנייר יהיה בדיוק מה שתקבלו בפרויקט.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-list">
+          <article class="srow on" data-i="0">
+            <svg class="snum" viewBox="0 0 400 470" aria-hidden="true" style="direction:ltr"><defs><clipPath id="c1"><text x="200" y="440" text-anchor="middle" font-family="Ploni, sans-serif" font-weight="900" font-size="560">1</text></clipPath></defs><g filter="url(#carve)"><g clip-path="url(#c1)"><image href="img/svc-plans.jpg" width="400" height="470" preserveAspectRatio="xMidYMid slice"/></g></g></svg>
+            <div class="sbody">
+              <h3>תוכניות ביצוע ואדריכלות</h3>
+              <p>סט מלא בקנה מידה 1:50, כדי שכל בעל מקצוע ידע בדיוק מה לבנות.</p>
+              <ul class="inc"><li>הריסה ובנייה</li><li>חשמל ותאורה</li><li>אינסטלציה</li><li>תקרות וריצוף</li></ul>
+              <img class="m-img" src="img/svc-plans.jpg" alt="" loading="lazy">
+              <a class="tlink wa-cta" data-msg="היי שרה, אשמח לשמוע על תוכניות ביצוע ואדריכלות לפרויקט שלנו" href="#meeting">לפרטים על התכנון <span>←</span></a>
+            </div>
+          </article>
+          <article class="srow" data-i="1">
+            <svg class="snum" viewBox="0 0 400 470" aria-hidden="true" style="direction:ltr"><defs><clipPath id="c2"><text x="200" y="440" text-anchor="middle" font-family="Ploni, sans-serif" font-weight="900" font-size="560">2</text></clipPath></defs><g filter="url(#carve)"><g clip-path="url(#c2)"><image href="img/svc-materials.jpg" width="400" height="470" preserveAspectRatio="xMidYMid slice"/></g></g></svg>
+            <div class="sbody">
+              <h3>ליווי בבחירת חומרים</h3>
+              <p>פגישות אצל ספקים נבחרים, עם פלטת צבעים שמחברת את כל הפרויקט.</p>
+              <ul class="inc"><li>מטבחים</li><li>ריצוף וחיפויים</li><li>כלים סניטריים</li><li>פלטות צבע</li></ul>
+              <img class="m-img" src="img/svc-materials.jpg" alt="" loading="lazy">
+              <a class="tlink wa-cta" data-msg="היי שרה, אשמח לליווי בבחירת חומרי גמר" href="#meeting">לפרטים על הליווי <span>←</span></a>
+            </div>
+          </article>
+          <article class="srow" data-i="2">
+            <svg class="snum" viewBox="0 0 400 470" aria-hidden="true" style="direction:ltr"><defs><clipPath id="c3"><text x="200" y="440" text-anchor="middle" font-family="Ploni, sans-serif" font-weight="900" font-size="560">3</text></clipPath></defs><g filter="url(#carve)"><g clip-path="url(#c3)"><image href="img/svc-site.jpg" width="400" height="470" preserveAspectRatio="xMidYMid slice"/></g></g></svg>
+            <div class="sbody">
+              <h3>פיקוח בשטח</h3>
+              <p>ביקורים באתר מול הקבלן ובעלי המקצוע, כדי שמה שתוכנן הוא בדיוק מה שנבנה.</p>
+              <ul class="inc"><li>ביקורים שוטפים</li><li>תיאום מערכות</li><li>זמינות בוואטסאפ</li></ul>
+              <img class="m-img" src="img/svc-site.jpg" alt="" loading="lazy">
+              <a class="tlink wa-cta" data-msg="היי שרה, אשמח לשמוע על פיקוח בשטח" href="#meeting">לפרטים על הפיקוח <span>←</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="svc-media reveal" aria-hidden="true">
+          <figure class="sm on"><img src="img/svc-plans.jpg" alt="" loading="lazy"><figcaption>סט תוכניות מלא · 1:50</figcaption></figure>
+          <figure class="sm"><img src="img/svc-materials.jpg" alt="" loading="lazy"><figcaption>בחירות אצל ספקים נבחרים</figcaption></figure>
+          <figure class="sm"><img src="img/svc-site.jpg" alt="" loading="lazy"><figcaption>עיניים מקצועיות בשטח</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  </template>
+
+  <!-- ============ STORY: the S collage ============ -->
+  <section class="story" id="story" aria-labelledby="st-title">
+   <div class="story-pin">
+    <span class="tri" aria-hidden="true"></span>
+    <div class="wrap">
+      <div class="mono rise" id="mono">
+        <svg viewBox="0 0 600 700" role="img" aria-label="האות S של Inside Story, ממולאת בתמונות של פרויקטים, חומרים ושרטוט" style="direction:ltr">
+          <defs><clipPath id="mclip"><text x="300" y="640" text-anchor="middle" font-family="Ploni, sans-serif" font-weight="900" font-size="860">S</text></clipPath></defs>
+          <g clip-path="url(#mclip)">
+            <rect width="600" height="700" fill="#F4EFE7"/>
+            <g class="fset on">
+              <image href="img/pr-kitchen3.jpg" x="0" y="0" width="330" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/frame-palette.jpg" x="330" y="0" width="270" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/hero-plan.jpg" x="0" y="360" width="260" height="340" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/pr-living.jpg" x="260" y="360" width="340" height="340" preserveAspectRatio="xMidYMid slice"/>
+            </g>
+            <g class="fset">
+              <image href="img/sp-kitchen.jpg" x="0" y="0" width="330" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/frame-materials2.jpg" x="330" y="0" width="270" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/sp-bath.jpg" x="0" y="360" width="260" height="340" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/sp-library.jpg" x="260" y="360" width="340" height="340" preserveAspectRatio="xMidYMid slice"/>
+            </g>
+            <g class="fset">
+              <image href="img/sp-dining.jpg" x="0" y="0" width="330" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/svc-plans.jpg" x="330" y="0" width="270" height="360" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/frame-materials.jpg" x="0" y="360" width="260" height="340" preserveAspectRatio="xMidYMid slice"/>
+              <image href="img/sp-library2.jpg" x="260" y="360" width="340" height="340" preserveAspectRatio="xMidYMid slice"/>
+            </g>
+          </g>
+        </svg>
+        <span class="cross" aria-hidden="true"><span id="cross">INSIDE STORY · INSIDE STORY · INSIDE STORY</span></span>
+        <span class="fcount" id="fcount" aria-hidden="true">01 / 03</span>
+      </div>
+      <div class="txt">
+        <h2 class="quote" data-split id="st-title">החלום שלכם<br><b>מעל הכל</b></h2>
+        <p class="st-sub rise">הכלים האמיתיים שאני נותנת לכל לקוח, כדי להבין שהפרויקט נכון בשבילו.</p>
+        <ul class="points" id="points">
+          <li class="cur"><b>01</b><div data-hl><h3>ידע אמיתי מהשטח</h3><p>ניסיון בשיפוץ ובנייה, כדי לזהות טעויות כבר בתוכנית, לפני שהן עולות כסף.</p></div></li>
+          <li><b>02</b><div data-hl><h3>קודם הנוחות, אחר כך היופי</h3><p>תכנון לפי השגרה והצרכים של כל בני המשפחה, ואז העיצוב שעוטף אותם.</p></div></li>
+          <li><b>03</b><div data-hl><h3>שקיפות בין טרנד לצורך</h3><p>מה שיפה היום, מה שנכון לכם גם בעוד עשר שנים, ואיך לא מוותרים על החלום.</p></div></li>
+        </ul>
+      </div>
+    </div>
+   </div>
+  </section>
+
+  <!-- ============ PROCESS: clean cards on a film ============ -->
+  <section class="process" id="process" aria-labelledby="p-title">
+    <div class="proc-pin">
+      <div class="wrap head split">
+        <div><h2 class="title" data-split id="p-title">מהשיחה עד <b>סיום הפרויקט</b></h2></div>
+        <p class="lead rise"><b>חמישה שלבים, ליווי אחד רציף.</b></p>
+      </div>
+      <div class="pview" id="pview">
+        <div class="ptrack" id="ptrack">
+          <article class="card"><div class="ph phone-ph"><div class="dev-phone" aria-hidden="true"><div class="scr">
+              <span class="call-state">ACTIVE CALL</span><span class="call-av"></span><span class="call-name">שרה ישראלי</span><span class="call-time" id="calltime">04:12</span>
+              <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="call-btns"><span></span><span class="end"></span><span></span></span>
+            </div></div></div>
+            <div class="txt"><span class="n">01</span><h3>שיחה ראשונה</h3><p>יצירת קשר, חיבור, והבנה מדויקת של מה שאתם באמת צריכים.</p></div></article>
+          <article class="card"><div class="ph mfilm" data-film="12000" role="img" aria-label="סרטון: מבט מלמעלה על שולחן פגישה עם מחשב, קפה, מחברת ועט, וידיים שמנהלות שיחה">
+              <div class="sc on"><video class="fvid" src="video/c-meeting.mp4" muted loop playsinline preload="metadata"></video>
+                <span class="ftag a-rise" style="--d:.3s">1 על 1</span>
+                <div class="tcard"><small class="a-rise" style="--d:.8s">פגישת ייעוץ</small><b class="a-rise" style="--d:1.05s">מתחילים מהצרכים שלכם</b></div></div>
+              <span class="fwm">INSIDE STORY</span><span class="fbar"><i></i></span>
+            </div>
+            <div class="txt"><span class="n">02</span><h3>פגישת ייעוץ</h3><p>פגישה 1 על 1, עמוקה ויסודית, להבנת הצרכים, החלומות והמסלולים שמתאימים לצרכי המשפחה.</p></div></article>
+          <article class="card"><div class="ph mfilm" data-film="7400" role="img" aria-label="סרט קצר: תוכנית אדריכלית של הפרויקט משורטטת קו אחרי קו">
+              <div class="sc on paper">
+                <svg class="fplan" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid meet" aria-hidden="true" style="direction:ltr">
+                  <path class="a-draw wall" style="--d:.2s" pathLength="1" d="M40 40 H600 V360 H40 Z"/>
+                  <path class="a-draw wall2" style="--d:.9s" pathLength="1" d="M330 40 V170 M330 232 V360 M40 210 H140"/>
+                  <path class="a-draw thin" style="--d:1.4s" pathLength="1" d="M120 36 H230 M120 44 H230 M420 356 H540 M420 364 H540"/>
+                  <path class="a-draw thin" style="--d:1.6s" pathLength="1" d="M330 232 L382 204 M382 204 A58 58 0 0 0 330 174"/>
+                  <path class="a-draw" style="--d:2.1s" pathLength="1" d="M352 50 H590 V222 H556 V84 H352 Z"/>
+                  <path class="a-draw" style="--d:2.5s" pathLength="1" d="M402 150 H516 V196 H402 Z M420 56 H462 V78 H420 Z"/>
+                  <path class="a-draw thin" style="--d:2.8s" pathLength="1" d="M352 90 H394 V136 H352 Z M352 90 L394 136"/>
+                  <g class="a-rise" style="--d:3s"><circle cx="418" cy="214" r="9"/><circle cx="446" cy="214" r="9"/><circle cx="474" cy="214" r="9"/><circle cx="502" cy="214" r="9"/><circle cx="530" cy="62" r="6"/><circle cx="550" cy="62" r="6"/><circle cx="530" cy="76" r="6"/><circle cx="550" cy="76" r="6"/></g>
+                  <path class="a-draw" style="--d:3.1s" pathLength="1" d="M110 252 H250 V318 H110 Z"/>
+                  <g class="a-rise" style="--d:3.4s"><circle cx="136" cy="240" r="9"/><circle cx="180" cy="240" r="9"/><circle cx="224" cy="240" r="9"/><circle cx="136" cy="330" r="9"/><circle cx="180" cy="330" r="9"/><circle cx="224" cy="330" r="9"/></g>
+                  <path class="a-draw" style="--d:3.4s" pathLength="1" d="M64 64 H270 V118 H64 Z M64 84 H270"/>
+                  <circle class="a-draw" style="--d:3.6s" pathLength="1" cx="167" cy="158" r="20"/>
+                  <path class="a-draw thin" style="--d:3.9s" pathLength="1" d="M40 20 H600 M40 14 V26 M600 14 V26 M620 40 V360 M614 40 H626 M614 360 H626"/>
+                  <g class="a-rise lbl" style="--d:4.2s"><text x="320" y="16">8.40</text><text x="470" y="290">מטבח</text><text x="168" y="196">סלון</text><text x="180" y="290">פינת אוכל</text></g>
+                </svg>
+</div>
+              <span class="fwm">INSIDE STORY</span><span class="fbar"><i></i></span>
+            </div>
+            <div class="txt"><span class="n">03</span><h3>שלב התכנון</h3><p>תכנון אדריכלי מדויק, בחירת פלטות צבע, השראות וספקים שמתאימים בדיוק לכם.</p></div></article>
+          <article class="card"><div class="ph mfilm" data-film="12000" role="img" aria-label="סרטון: פרויקט בבנייה מבחוץ, עם מחפרים שעובדים סביבו">
+              <div class="sc on"><video class="fvid" src="video/c-build.mp4" muted loop playsinline preload="metadata"></video>
+                <span class="ftag a-rise" style="--d:.3s">בשטח</span>
+                <div class="tcard"><small class="a-rise" style="--d:.8s">מול הקבלן ובעלי המקצוע</small><b class="a-rise" style="--d:1.05s">כל פרט לפי התוכנית</b></div></div>
+              <span class="fwm">INSIDE STORY</span><span class="fbar"><i></i></span>
+            </div>
+            <div class="txt"><span class="n">04</span><h3>ביקורים בשטח</h3><p>פגישות עם הקבלן ובעלי המקצוע, כדי שהביצוע יתאים לתוכניות האדריכליות עד הפרט האחרון.</p></div></article>
+          <article class="card"><div class="ph mfilm" data-film="2700,2700,2700,3900" role="img" aria-label="סרט קצר: תקריבים של שיש, עץ אגוז ונחושת מהפרויקטים של שרה, ובסוף פלטת החומרים של הפרויקט">
+              <div class="sc on"><img class="a-detail" src="img/sp-bath.jpg" alt="" style="object-position:14% 18%;transform-origin:14% 18%">
+                <span class="chip a-chip" style="--d:.4s;--c:#E8E2DA"><i></i>שיש בהיר</span></div>
+              <div class="sc"><img class="a-detail" src="img/sp-kitchen.jpg" alt="" style="object-position:45% 38%;transform-origin:45% 38%">
+                <span class="chip a-chip" style="--d:.4s;--c:#7B5234"><i></i>עץ אגוז</span></div>
+              <div class="sc"><img class="a-detail" src="img/sp-bath.jpg" alt="" style="object-position:64% 55%;transform-origin:64% 55%">
+                <span class="chip a-chip" style="--d:.4s;--c:#B4703F"><i></i>נחושת</span></div>
+              <div class="sc"><img class="a-pan" src="img/sp-kitchen.jpg" alt="">
+                <div class="palette"><small class="a-rise" style="--d:.2s">פלטה אחת, פרויקט שלם</small>
+                  <div><i class="a-chip" style="--d:.5s;--c:#E8E2DA"></i><i class="a-chip" style="--d:.65s;--c:#D9CCBA"></i><i class="a-chip" style="--d:.8s;--c:#7B5234"></i><i class="a-chip" style="--d:.95s;--c:#B4703F"></i><i class="a-chip" style="--d:1.1s;--c:#A9B8A3"></i></div></div></div>
+              <span class="fwm">INSIDE STORY</span><span class="fbar"><i></i></span>
+            </div>
+            <div class="txt"><span class="n">05</span><h3>בחירת חומרים</h3><p>ליווי ברכישה ובבחירת חומרי גמר ואביזרים אצל ספקים נבחרים, ואישור של כל פריט לפני שקונים.</p></div></article>
+        </div>
+      </div>
+      <div class="film-prog" aria-hidden="true"><span class="bar"><i></i></span><span class="count" id="film-count">01 / 05</span></div>
+    </div>
+  </section>
+
+
+
+  <!-- ============ BEFORE / AFTER (move the mouse across the photo) ============ -->
+  <section class="section ba" id="before-after" aria-labelledby="ba-title">
+    <div class="wrap">
+      <div class="head center">
+        <h2 class="title" data-split id="ba-title">מה שתכנון נכון <b>עושה לפרויקט</b></h2>
+        <p class="lead rise">ראו את המטבח עובר תכנון ושיפוץ, עד לפרויקט מוגמר שמתוכנן נכון.</p>
+      </div>
+      <div class="ba-stage reveal" id="ba" role="slider" tabindex="0" aria-label="השוואה לפני ואחרי: הזזה ימינה ושמאלה" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <div class="ba-after">
+          <img src="img/ba-after.jpg" alt="אחרי: מטבח מעוצב בגווני חול ועץ, בר עם כיסאות ירוקים, תאורה תלויה וויטרינת זכוכית מוארת" loading="lazy">
+          <!-- planning notes drawn over the finished kitchen, like a sketch on the plan (coordinates of the 1148×762 photo) -->
+          <svg class="ba-sketch" viewBox="0 0 1148 762" preserveAspectRatio="none" aria-hidden="true" style="direction:ltr">
+            <g class="n n1">
+              <path class="draw" pathLength="1" d="M1120 38 V714"/><path class="draw" pathLength="1" d="M1108 38 H1132 M1108 714 H1132"/>
+              <path class="draw" pathLength="1" d="M1112 52 L1120 38 L1128 52 M1112 700 L1120 714 L1128 700"/>
+              <path class="lead" pathLength="1" d="M1120 120 C1060 120 990 96 930 70"/>
+              <circle class="mk" cx="1120" cy="380" r="17"/><text class="mt" x="1120" y="386">1</text>
+            </g>
+            <g class="n n2">
+              <rect class="dash" x="664" y="266" width="92" height="330" rx="6"/>
+              <path class="lead" pathLength="1" d="M710 596 V640 C710 664 690 676 664 682"/>
+              <circle class="mk" cx="710" cy="266" r="17"/><text class="mt" x="710" y="272">2</text>
+            </g>
+            <g class="n n3">
+              <path class="draw" pathLength="1" d="M158 402 L528 406"/><path class="draw" pathLength="1" d="M158 392 V412 M528 396 V416"/>
+              <path class="draw" pathLength="1" d="M362 384 L620 384"/><path class="draw" pathLength="1" d="M362 374 V394 M620 374 V394"/>
+              <path class="lead" pathLength="1" d="M158 402 C150 360 180 330 196 306"/>
+              <circle class="mk" cx="340" cy="404" r="17"/><text class="mt" x="340" y="410">3</text>
+            </g>
+            <g class="n n4">
+              <path class="dash" d="M352 166 L598 200"/>
+              <path class="lead" pathLength="1" d="M440 172 C430 130 420 100 410 78"/>
+              <circle class="mk" cx="476" cy="178" r="17"/><text class="mt" x="476" y="184">4</text>
+            </g>
+            <g class="n n5">
+              <ellipse class="dash" cx="325" cy="505" rx="196" ry="112"/>
+              <path class="lead" pathLength="1" d="M150 560 C130 590 120 615 112 640"/>
+              <circle class="mk" cx="140" cy="540" r="17"/><text class="mt" x="140" y="546">5</text>
+            </g>
+          </svg>
+          <span class="ba-note n1" style="left:65%;top:4%">ניצול חלל עד התקרה</span>
+          <span class="ba-note n2" style="left:44.5%;top:86%">מקרר במרכז המטבח</span>
+          <span class="ba-note n3" style="left:2%;top:34%">משטח עבודה בקו אחיד</span>
+          <span class="ba-note n4" style="left:20%;top:5%">תאורה מעל אזור העבודה</span>
+          <span class="ba-note n5" style="left:2%;top:84%">אזור ישיבה נוח לכל המשפחה</span>
+        </div>
+        <div class="ba-before"><img src="img/ba-before.jpg" alt="לפני: המטבח הישן, עם ארונות בכחול ולבן ופינת אוכל קטנה צמודה לקיר" loading="lazy"></div>
+        <span class="ba-tag t-before">לפני</span><span class="ba-tag t-after">אחרי</span>
+        <span class="ba-line" aria-hidden="true"><span class="ba-knob"><svg viewBox="0 0 24 24"><path d="m9 7-5 5 5 5"/><path d="m15 7 5 5-5 5"/></svg></span></span>
+      </div>
+      <ol class="ba-notes" id="ba-notes">
+        <li data-n="1"><b>1</b><div><h3>ניצול חלל עד התקרה</h3><p>ארונות בגובה מלא, מהרצפה ועד התקרה: כל סנטימטר הופך לאחסון, והקיר נשאר נקי ושקט.</p></div></li>
+        <li data-n="2"><b>2</b><div><h3>מקרר במרכז המטבח</h3><p>המקרר במרכז הקיר, צעד אחד מהמשטח, מהכיור ומהתנור. פחות הליכה, יותר זרימה.</p></div></li>
+        <li data-n="3"><b>3</b><div><h3>משטח עבודה בקו אחיד</h3><p>משטח רציף בגובה אחד, מהכיור ועד הבר: מקום לעבוד בו יחד, בלי מדרגות ובלי הפרעות.</p></div></li>
+        <li data-n="4"><b>4</b><div><h3>תאורה מעל אזור העבודה</h3><p>גוף תאורה לינארי לאורך המשטח: אור אחיד על הידיים, בלי צללים.</p></div></li>
+        <li data-n="5"><b>5</b><div><h3>ניצול אזור ישיבה נוח למספר הנפשות במשפחה</h3><p>במקום שולחן קטן צמוד לקיר, אזור ישיבה רחב שמתאים לכל בני המשפחה: ארוחת בוקר, שיעורי בית ושיחה עם מי שמבשל.</p></div></li>
+      </ol>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT: wide photo + clean card ============ -->
+  <section class="section about" id="about" aria-labelledby="a-title">
+    <div class="wrap about-grid">
+      <figure class="about-frame" id="aframe"><img src="img/sara.jpg" alt="שרה ישראלי במטבח שעיצבה, ליד אי בגוון תכלת, מחייכת ומחזיקה טאבלט" loading="lazy"></figure>
+      <div class="about-copy">
+        <h2 class="hello" data-split id="a-title">נעים מאוד, <b>אני שרה</b></h2>
+        <p class="role rise">מעצבת ומתכננת פנים · מתמחה בתכנון מטבחים</p>
+        <p class="big" data-hl>נשואה ללוי ואמא לשלושה, ויודעת מהבית עד כמה חלל נכון משפיע על השקט ועל האנרגיה של המשפחה. אני כאן להיות לכם עיניים מקצועיות ולב שמקשיב, ולחשוב עבורכם גם על מה שיראה יפה וגם על מה שיחסוך טעויות, כסף ותסכול.</p>
+        <a class="btn btn-cta rise" href="#meeting">לפגישת היכרות <span class="arr">←</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL: curved video wall (follows the mouse) ============ -->
+  <section class="section social" id="social" aria-labelledby="so-title">
+    <div class="wrap head center">
+      <h2 class="title" data-split id="so-title">רגעים <b>מהשטח</b></h2>
+    </div>
+    <div class="curve" id="curve" aria-roledescription="קרוסלה" aria-label="סרטונים מהשטח">
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-1.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: פרטים שעושים את הבית"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>פרטים שעושים את הבית</div></div></div></div>
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-2.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: פגישת תכנון עם המשפחה"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>פגישת תכנון עם המשפחה</div></div></div></div>
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-3.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: רגעים עם הלקוחות"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>רגעים עם הלקוחות</div></div></div></div>
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-4.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: שלבי שיפוץ"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>שלבי שיפוץ</div></div></div></div>
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-5.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: מטבח בתהליך"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>מטבח בתהליך</div></div></div></div>
+      <div class="rc"><div class="phone"><div class="scr"><video src="video/sara-6.mp4" muted loop playsinline preload="metadata" aria-label="סרטון מהשטח: פיקוח בשטח"></video><div class="ui"><span class="who">insidestory<img src="img/logo-mark.png" alt=""></span>פיקוח בשטח</div></div></div></div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <!-- TODO: replace the sample quotes in REVIEWS (script below) with real client reviews before going live -->
+  <section class="section reviews" id="reviews" aria-labelledby="r-title">
+    <div class="wrap">
+      <div class="qstage">
+        <div class="qphoto rise" id="qphoto" aria-hidden="true"></div>
+        <div class="qtext" id="qtext">
+          <h2 class="sr" id="r-title">לקוחות ממליצים</h2>
+          <span class="stars" aria-label="5 כוכבים"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <blockquote id="q-text" aria-live="polite"></blockquote>
+          <cite id="q-who"></cite>
+          <p class="qnote">המלצות לדוגמה בלבד · יוחלפו בהמלצות אמיתיות של לקוחות</p>
+          <div class="qnav"><span class="qcap">מהפרויקטים</span><span class="count" id="q-count">01 / 06</span></div>
+          <div class="qthumbs" id="qthumbs"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERSONAL MEETING ============ -->
+  <section class="section meeting" id="meeting" aria-labelledby="m-title">
+    <div class="wrap">
+      <!-- the whole card is one call to action (WhatsApp); the phone sits under it -->
+      <a class="mcard wa-cta rise" data-msg="היי שרה! אשמח לתאם פגישת ייעוץ אישית" href="#meeting">
+        <img class="mark" src="img/logo-mark-w.png" alt="" width="226" height="276">
+        <h2 class="title" id="m-title">בואו נתכנן את <b>הפרויקט שלכם</b></h2>
+        <span class="mlead">פגישת ייעוץ אישית: אני מקשיבה לחלומות, לשגרה ולצרכים של כל בני המשפחה, ואתם יוצאים עם כיוון תכנון ברור.</span>
+        <span class="mgo">לתיאום פגישת ייעוץ <span class="arr" aria-hidden="true">←</span></span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-logo"><img class="mark" src="img/logo-mark-w.png" alt="" width="226" height="276"><img class="word" src="img/logo-word-w.png" alt="Inside Story Interior Design Studio" width="610" height="195"></div>
+    </div>
+    <div class="fcols">
+      <div><h4>באתר</h4><a href="#tracks">מסלולים</a><a href="#story">הסיפור שלכם</a><a href="#process">מהשיחה עד סיום הפרויקט</a></div>
+      <div><h4>עוד</h4><a href="#about">קצת עליי</a><a href="#social">רגעים מהשטח</a><a href="#reviews">לקוחות ממליצים</a><a href="#meeting">פגישת ייעוץ</a></div>
+      <div class="f-contact"><h4>יצירת קשר</h4>
+        <a href="tel:+972546677489"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><span dir="ltr">054-667-7489</span></a>
+        <a href="mailto:sarastudio6677@gmail.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg><span dir="ltr">sarastudio6677@gmail.com</span></a>
+        <p><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>משרד בכרמי גת</p>
+        <p><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg>א׳–ה׳ · 10:00–16:00</p>
+        <div class="socials"><a href="#" aria-label="אינסטגרם"><svg class="ico"><use href="#i-insta"/></svg></a><a href="#" aria-label="פייסבוק"><svg class="ico"><use href="#i-fb"/></svg></a><a class="wa-cta" data-msg="היי שרה!" href="#meeting" aria-label="וואטסאפ"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></a></div>
+      </div>
+    </div>
+    <div class="f-legal"><a href="#">תקנון האתר</a><a href="#">הצהרת נגישות</a><a href="#">מדיניות פרטיות</a></div>
+  </div>
+  <div class="credit">עיצוב ופיתוח: שרהלה חיכמן · כל הזכויות שמורות לשרה ישראלי</div>
+</footer>
+
+<a class="wa wa-cta" data-msg="היי שרה! אשמח לשמוע על תכנון הפרויקט שלנו" href="#meeting" aria-label="שיחה עם שרה בוואטסאפ"><svg width="34" height="34" aria-hidden="true"><use href="#wa-logo"/></svg></a>
+<div class="mbar" aria-label="פעולות מהירות">
+  <a class="mbar-main" href="#meeting">לפגישת ייעוץ אישית <span aria-hidden="true">←</span></a>
+  <a class="mbar-wa wa-cta" data-msg="היי שרה! אשמח לשמוע על תכנון הפרויקט שלנו" href="#meeting" aria-label="שיחה עם שרה בוואטסאפ"><svg aria-hidden="true"><use href="#wa-logo"/></svg></a>
+</div>
+<button class="a11y" aria-label="תפריט נגישות"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M19 8.5 14 9v12h-2v-6h0v6h-2V9L5 8.5V6.6l7 .9 7-.9z"/></svg></button>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  const WA = '972546677489';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const mob = () => matchMedia('(max-width: 700px)').matches;
+  const narrow = () => matchMedia('(max-width: 980px)').matches;
+  // the story is pinned on desktop and on tall iPad portrait screens
+  const storyPinned = () => matchMedia('(min-width: 981px), (min-width: 701px) and (min-height: 900px)').matches;
+  const clamp01 = x => Math.min(1, Math.max(0, x));
+  const easeOut = t => 1 - Math.pow(1 - t, 4);
+  document.documentElement.classList.add('js');
+  const waUrl = msg => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  document.querySelectorAll('.wa-cta').forEach(a => { a.href = waUrl(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; });
+
+  /* smooth, soft scrolling (Lenis); anchors glide too */
+  let lenis = null;
+  if (!reduce && window.Lenis) lenis = new Lenis({ lerp: 0.16, smoothWheel: true });
+  document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+    const id = a.getAttribute('href'); if (id.length < 2) return;
+    const t = document.querySelector(id); if (!t) return;
+    e.preventDefault();
+    if (lenis) lenis.scrollTo(t, { offset: id === '#top' ? 0 : -70, duration: 1.6 }); else t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+  }));
+
+  /* split headings into words (they rise one by one) and reading text into words (they light up) */
+  function splitWords(el, cls, inner) {
+    const out = [];
+    const walk = node => [...node.childNodes].forEach(ch => {
+      if (ch.nodeType === 3) {
+        if (!ch.textContent.trim()) return;
+        const frag = document.createDocumentFragment();
+        ch.textContent.split(/(\s+)/).forEach(tk => {
+          if (!tk) return;
+          if (/^\s+$/.test(tk)) { frag.append(' '); return; }
+          const w = document.createElement('span'); w.className = cls;
+          if (inner) { const s = document.createElement('span'); s.textContent = tk; w.append(s); } else w.textContent = tk;
+          frag.append(w); out.push(w);
+        });
+        ch.replaceWith(frag);
+      } else if (ch.nodeType === 1 && ch.tagName !== 'BR') walk(ch);
+    });
+    walk(el); return out;
+  }
+  document.querySelectorAll('[data-split]').forEach(el => splitWords(el, 'w', true).forEach((w, i) => w.style.setProperty('--i', i)));
+  const hlGroups = [...document.querySelectorAll('[data-hl]')].map(el => ({ el, words: splitWords(el, 'hw', false) }));
+
+  /* reveals */
+  const hero = document.querySelector('.hero');
+  const revealEls = [...document.querySelectorAll('[data-split], .rise, .reveal, .label')].filter(el => !hero.contains(el));
+  if (reduce) revealEls.forEach(el => el.classList.add('in'));
+  else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(el => io.observe(el));
+  }
+
+  /* header, menu, bottom bar */
+  const header = document.querySelector('.header'), burger = document.querySelector('.burger'), nav = document.getElementById('nav'), mbar = document.querySelector('.mbar');
+  let meetIn = false;
+  function barFrame() { const on = mob() && scrollY > hero.offsetHeight * .8 && !meetIn && !nav.classList.contains('open'); mbar.classList.toggle('on', on); document.documentElement.classList.toggle('bar-on', on); }
+  function setMenu(o) {
+    nav.classList.toggle('open', o); burger.setAttribute('aria-expanded', o); burger.setAttribute('aria-label', o ? 'סגירת תפריט' : 'פתיחת תפריט');
+    document.documentElement.classList.toggle('menu-open', o && mob()); document.documentElement.style.overflow = o && mob() ? 'hidden' : '';
+    if (lenis) o && mob() ? lenis.stop() : lenis.start();
+    barFrame();
+  }
+  burger.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); burger.focus(); } });
+  new IntersectionObserver(([e]) => { meetIn = e.isIntersecting; barFrame(); }, { threshold: .3 }).observe(document.getElementById('meeting'));
+
+  /* ===== HERO: a film inside INSIDE STORY. The words slide in from the sides, and part again as you scroll ===== */
+  const hfilm = document.getElementById('hfilm'), hclip = document.getElementById('hclipBB'), cutbox = document.getElementById('cutbox'), heroTop = hero.querySelector('.hero-top');
+  const hcT = ['hc1', 'hc2', 'ov1', 'ov2'].map(id => document.getElementById(id));
+  const sizeClip = () => hfilm && hclip.setAttribute('transform', `scale(${hfilm.offsetWidth / 2800} ${hfilm.offsetHeight / 800})`);
+  sizeClip(); if (hfilm) new ResizeObserver(sizeClip).observe(hfilm);
+  const slides = hfilm ? [...hfilm.querySelectorAll('.hslide')] : [];
+  let hs = 0, heroVisible = true;
+  function showSlide(i) {
+    const prev = slides[hs]; prev.classList.remove('on');
+    hs = (i + slides.length) % slides.length;
+    const s = slides[hs], v = s.querySelector('video'); s.classList.add('on');
+    if (v) { try { v.currentTime = 0; } catch (e) {} v.play().catch(() => {}); }
+    const pv = prev.querySelector('video'); if (pv) setTimeout(() => pv.pause(), 1800);
+  }
+  if (hfilm) new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; }).observe(hfilm);
+  if (!reduce && slides.length) setInterval(() => { if (heroVisible && !document.hidden) showSlide(hs + 1); }, 4200);
+  let introT0 = null;
+  /* hero type block: size every [data-fit] line so it runs exactly from edge to edge */
+  // hero info points: tap to open on touch screens
+  document.querySelectorAll('.hs, .h4hs').forEach(b => b.addEventListener('click', () => { const o = b.classList.contains('open'); document.querySelectorAll('.hs, .h4hs').forEach(x => x.classList.remove('open')); if (!o) b.classList.add('open'); }));
+  // header scroll progress
+  const sprog = document.querySelector('.sprog');
+  function progFrame() { if (!sprog) return; const max = document.documentElement.scrollHeight - innerHeight; sprog.style.setProperty('--sp', max > 0 ? clamp01(scrollY / max).toFixed(4) : 0); }
+  // hero service tiles: one open at a time; tap, or point at it with a mouse
+  const tiles = [...document.querySelectorAll('.h4s')];
+  const openTile = x => tiles.forEach(t => { t.classList.toggle('on', t === x); t.setAttribute('aria-pressed', t === x); });
+  tiles.forEach(t => { t.addEventListener('click', () => openTile(t)); t.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') openTile(t); }); });
+  // hero photos change by themselves every few seconds while the hero is on screen
+  (() => {
+    const box = document.getElementById('h4slides'); if (!box) return;
+    const sl = [...box.querySelectorAll('.h4sl')], dots = [...document.querySelectorAll('.h4dots i')], photo = box.closest('.h4photo');
+    let i = 0, vis = true;
+    const show = n => { i = (n + sl.length) % sl.length; sl.forEach((s, k) => s.classList.toggle('on', k === i)); dots.forEach((d, k) => d.classList.toggle('on', k === i)); photo.classList.toggle('s0', i === 0); };
+    show(0);
+    new IntersectionObserver(([e]) => { vis = e.isIntersecting; }).observe(box);
+    setInterval(() => { if (vis && !document.hidden) show(i + 1); }, reduce ? 7000 : 5200);
+  })();
+  const fitLines = () => document.querySelectorAll('[data-fit]').forEach(el => {
+    const s = el.firstElementChild; if (!s) return;
+    el.style.fontSize = '100px';
+    const w = s.getBoundingClientRect().width, target = el.clientWidth;
+    if (w > 0 && target > 0) el.style.fontSize = `${(100 * target / w).toFixed(2)}px`;
+  });
+  fitLines(); document.fonts.ready.then(fitLines); addEventListener('resize', fitLines);
+  const startHero = () => { if (introT0 !== null) return; sizeClip(); introT0 = performance.now(); hero.classList.add('in'); hero.querySelectorAll('[data-split]').forEach(e => e.classList.add('in')); };
+  document.fonts.ready.then(() => setTimeout(startHero, 150)); setTimeout(startHero, 1600);
+  let heroKey = '';
+  // the "name" hero: a quiet scroll. The photo drifts down and zooms a little, the name slides into the photo, the 01 rises.
+  const h4 = document.querySelector('.hero4'), h4img = h4 && h4.querySelector('.h4slides'), h4word = h4 && h4.querySelector('.h4word'), h4num = h4 && h4.querySelector('.h4num');
+  let h4key = '';
+  function hero4Frame() {
+    if (!h4 || reduce) return;
+    const s = clamp01(scrollY / Math.max(1, h4.offsetHeight)), key = s.toFixed(3);
+    if (key === h4key) return; h4key = key;
+    if (h4img) h4img.style.transform = `translateY(${(s * 90).toFixed(1)}px) scale(${(1 + s * .08).toFixed(4)})`;
+    if (h4word && !narrow()) h4word.style.transform = `translateX(${(-s * 70).toFixed(1)}px)`;
+    if (h4num) h4num.style.transform = `translateY(${(-s * 120).toFixed(1)}px)`;
+  }
+  function heroFrame(now) {
+    hero4Frame();
+    if (!cutbox) return;   // the carved-word hero was replaced by the photo card
+    const e = introT0 === null ? 0 : reduce ? 1 : easeOut(clamp01((now - introT0) / 1400));
+    const s = reduce ? 0 : clamp01(scrollY / Math.max(1, hero.offsetHeight));
+    const spread = (1 - e) * 220;   // only a short, gentle entrance; nothing moves on scroll
+    const key = `${spread.toFixed(1)}|${s.toFixed(3)}`; if (key === heroKey) return; heroKey = key;
+    hcT[0].setAttribute('transform', `translate(${-spread} 0)`); hcT[2].setAttribute('transform', `translate(${-spread} 0)`);
+    hcT[1].setAttribute('transform', `translate(${spread} 0)`); hcT[3].setAttribute('transform', `translate(${spread} 0)`);
+  }
+
+  /* ===== SERVICES: the picture changes slowly and calmly ===== */
+  const srows = [...document.querySelectorAll('.srow')], sms = [...document.querySelectorAll('.sm')], slist = document.querySelector('.svc-list');
+  let sCur = 0, sT = 0;
+  const pickS = i => { if (i === sCur) return; sCur = i; srows.forEach((r, k) => r.classList.toggle('on', k === i)); sms.forEach((m, k) => m.classList.toggle('on', k === i)); };
+  srows.forEach((r, i) => {
+    r.addEventListener('pointerenter', e => { if (e.pointerType === 'touch') return; slist.classList.add('focus'); clearTimeout(sT); sT = setTimeout(() => pickS(i), 280); });
+    r.addEventListener('click', () => { clearTimeout(sT); pickS(i); });
+  });
+  if (slist) slist.addEventListener('pointerleave', () => { clearTimeout(sT); slist.classList.remove('focus'); });
+  const sio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting && !slist.classList.contains('focus')) { clearTimeout(sT); const i = srows.indexOf(e.target); sT = setTimeout(() => pickS(i), 450); } }), { rootMargin: '-45% 0px -45% 0px' });
+  srows.forEach(r => sio.observe(r));
+
+  /* ===== STORY: pinned; the words light up as you read, the S changes its frames ===== */
+  const story = document.getElementById('story'), mono = document.getElementById('mono'), fsets = [...mono.querySelectorAll('.fset')];
+  const fcount = document.getElementById('fcount'), cross = document.getElementById('cross'), pointsEl = document.getElementById('points'), pts = [...pointsEl.children];
+  const storyHL = hlGroups.filter(g => story.contains(g.el)), storyWords = storyHL.flatMap(g => g.words);
+  let fsetI = 0;
+  function storyFrame(vh) {
+    const r = story.getBoundingClientRect();
+    if (r.bottom < -50 || r.top > vh + 50) return;
+    let p;
+    if (storyPinned()) p = clamp01(-r.top / Math.max(1, r.height - vh));
+    else { const tr = pointsEl.getBoundingClientRect(); p = clamp01((vh * .85 - tr.top) / (tr.height + vh * .25)); }
+    const lit = (reduce ? 1 : clamp01((p - .04) / .84)) * storyWords.length;
+    storyWords.forEach((w, k) => w.style.setProperty('--o', (.2 + .8 * clamp01(lit - k)).toFixed(3)));
+    let acc = 0, cur = 0;
+    storyHL.forEach((g, gi) => { pts[gi].style.setProperty('--lp', clamp01((lit - acc) / g.words.length).toFixed(3)); if (lit > acc + .5) cur = gi; acc += g.words.length; });
+    pts.forEach((li, k) => li.classList.toggle('cur', k === cur));
+    if (cur !== fsetI) { fsetI = cur; fsets.forEach((g, k) => g.classList.toggle('on', k === cur)); fcount.textContent = `0${cur + 1} / 0${fsets.length}`; }
+    if (false) {
+      mono.style.transform = narrow() ? '' : `rotate(${((p - .5) * -5).toFixed(2)}deg) scale(${(.95 + p * .07).toFixed(4)})`;
+      cross.style.transform = `translateX(${((p - .5) * 26).toFixed(2)}%)`;
+    }
+  }
+
+  /* other reading text (About): words light up by their place on the screen */
+  const looseHL = hlGroups.filter(g => !story.contains(g.el));
+  function hlFrame(vh) {
+    looseHL.forEach(g => {
+      const r = g.el.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return;
+      const lit = (reduce ? 1 : clamp01((vh * .82 - r.top) / (r.height + vh * .3))) * g.words.length;
+      g.words.forEach((w, k) => w.style.setProperty('--o', (.2 + .8 * clamp01(lit - k)).toFixed(3)));
+    });
+  }
+
+  /* ===== PROCESS: pinned; scrolling down glides the big cards sideways ===== */
+  const proc = document.getElementById('process'), pview = document.getElementById('pview'), ptrack = document.getElementById('ptrack'), cards = [...ptrack.children];
+  const fprog = document.querySelector('.film-prog'), fcountP = document.getElementById('film-count');
+  let pOver = 0;
+  /* the motion films in the cards: scenes with their own timing, a progress bar, playing only while the card is centred */
+  const films = [...ptrack.querySelectorAll('[data-film]')].map(el => {
+    const f = { el, scenes: [...el.querySelectorAll(':scope > .sc')], durs: el.dataset.film.split(',').map(Number), i: 0, t: 0, playing: false, bar: el.querySelector('.fbar i'), vid: el.querySelector('video') };
+    f.total = f.durs.reduce((a, b) => a + b, 0); el.closest('.card')._film = f; return f;
+  });
+  const showScene = (f, i) => { f.scenes.forEach(s => s.classList.remove('on')); void f.el.offsetWidth; f.i = i; f.t = 0; f.el.dataset.s = i; f.scenes[i].classList.add('on'); };
+  films.forEach(f => { f.el.dataset.s = 0; });
+  let filmLast = 0;
+  function filmsFrame(now) {
+    const dt = filmLast ? Math.min(100, now - filmLast) : 0; filmLast = now;
+    films.forEach(f => {
+      f.el.classList.toggle('playing', f.playing);
+      if (f.vid) { if (f.playing && f.vid.paused) f.vid.play().catch(() => {}); else if (!f.playing && !f.vid.paused) f.vid.pause(); }
+      if (!f.playing) return;
+      f.t += dt;
+      if (f.t >= f.durs[f.i]) showScene(f, (f.i + 1) % f.scenes.length);
+      const done = f.durs.slice(0, f.i).reduce((a, b) => a + b, 0) + f.t;
+      f.el.style.setProperty('--fp', (done / f.total).toFixed(4));
+    });
+  }
+  function procSize() { pOver = Math.max(0, ptrack.offsetWidth - pview.clientWidth); proc.style.height = `${innerHeight + pOver * 1.1}px`; }
+  function procFrame(vh) {
+    const r = proc.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > vh) { films.forEach(f => { f.playing = false; }); return; }
+    const p = clamp01(-r.top / Math.max(1, r.height - vh));
+    ptrack.style.transform = `translate3d(${(p * pOver).toFixed(1)}px, 0, 0)`;
+    const vr = pview.getBoundingClientRect(), vc = vr.left + vr.width / 2;
+    cards.forEach(c => {
+      const cr = c.getBoundingClientRect(), cx = cr.left + cr.width / 2;
+      const d = Math.min(1, Math.abs(cx - vc) / vr.width);
+      c.style.transform = ''; c.style.opacity = '';
+      // the card's film plays only while the card is near the middle of the frame
+      if (c._film) c._film.playing = d < .55 && !reduce;
+    });
+    fprog.style.setProperty('--fp', (.2 + p * .8).toFixed(3));
+    fcountP.textContent = `0${Math.min(cards.length, Math.round(p * (cards.length - 1)) + 1)} / 0${cards.length}`;
+  }
+  let secs = 252; const ct = document.getElementById('calltime');
+  setInterval(() => { secs++; ct.textContent = `${String(Math.floor(secs / 60)).padStart(2, '0')}:${String(secs % 60).padStart(2, '0')}`; }, 1000);
+
+  /* ===== BEFORE / AFTER: the line glides after the mouse (drag on touch), the stage tilts a little ===== */
+  const ba = document.getElementById('ba');
+  let bx = 50, bt = 50, tlx = 0, tly = 0, tgx = 0, tgy = 0, baRunning = false, baTouched = false;
+  function baFrame() {
+    const k = reduce ? 1 : .11;
+    bx += (bt - bx) * k; tlx += (tgx - tlx) * k; tly += (tgy - tly) * k;
+    ba.style.setProperty('--x', `${bx.toFixed(2)}%`);
+    ba.style.setProperty('--tx', `${tlx.toFixed(3)}deg`); ba.style.setProperty('--ty', `${tly.toFixed(3)}deg`);
+    ba.style.setProperty('--px', '0px');
+    ba.style.setProperty('--ob', clamp01((100 - bx) / 20).toFixed(3)); ba.style.setProperty('--oa', clamp01(bx / 20).toFixed(3));
+    ba.setAttribute('aria-valuenow', Math.round(100 - bx));
+    if (Math.abs(bt - bx) > .05 || Math.abs(tgx - tlx) > .01 || Math.abs(tgy - tly) > .01) requestAnimationFrame(baFrame); else baRunning = false;
+  }
+  const baRun = () => { if (!baRunning) { baRunning = true; requestAnimationFrame(baFrame); } };
+  function baPoint(e) {
+    const r = ba.getBoundingClientRect();
+    bt = Math.min(100, Math.max(0, (e.clientX - r.left) / r.width * 100));
+    if (false) { tgx = ((e.clientX - r.left) / r.width - .5) * 5; tgy = -((e.clientY - r.top) / r.height - .5) * 4; }
+    baTouched = true; baRun();
+  }
+  ba.addEventListener('pointermove', e => { if (e.pointerType !== 'touch' || ba.classList.contains('drag')) baPoint(e); });
+  ba.addEventListener('pointerdown', e => { ba.classList.add('drag'); baPoint(e); });
+  addEventListener('pointerup', () => ba.classList.remove('drag'));
+  ba.addEventListener('pointerleave', () => { tgx = 0; tgy = 0; ba.classList.remove('drag'); baRun(); });
+  ba.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); bt = Math.min(100, Math.max(0, bt + (e.key === 'ArrowRight' ? 8 : -8))); baTouched = true; baRun(); } });
+  /* the plan notes: each one draws itself in turn (marker, measuring lines, traced outline), then its label is typed */
+  const NS = 'http://www.w3.org/2000/svg', sketch = ba.querySelector('.ba-sketch'), sdefs = document.createElementNS(NS, 'defs');
+  sketch.prepend(sdefs);
+  const notes = [1, 2, 3, 4, 5].map(i => {
+    const g = sketch.querySelector(`.n${i}`), label = ba.querySelector(`.ba-note.n${i}`);
+    // dashed outlines are traced through a mask whose solid copy draws in
+    const traces = [...g.querySelectorAll('.dash')].map((el, k) => {
+      const m = document.createElementNS(NS, 'mask'); m.id = `trace-${i}-${k}`;
+      [['maskUnits', 'userSpaceOnUse'], ['x', -60], ['y', -60], ['width', 1270], ['height', 880]].forEach(([a, v]) => m.setAttribute(a, v));
+      const c = el.cloneNode(); c.setAttribute('class', 'trace'); c.setAttribute('pathLength', '1'); m.append(c); sdefs.append(m);
+      el.setAttribute('mask', `url(#${m.id})`); return c;
+    });
+    const mk = g.querySelector('.mk'), ring = mk.cloneNode(); ring.setAttribute('class', 'ring'); g.insertBefore(ring, mk);
+    const text = label.textContent.trim(); label.textContent = '';
+    return { g, label, traces, text, timer: 0 };
+  });
+  function typeInto(el, text, speed) {
+    clearInterval(el._t); el.textContent = ''; el.classList.add('typing'); let i = 0;
+    el._t = setInterval(() => { i++; el.textContent = text.slice(0, i); if (i >= text.length) { clearInterval(el._t); setTimeout(() => el.classList.remove('typing'), 1200); } }, speed);
+  }
+  const noteEls = n => [n.g, ...n.g.querySelectorAll('*'), ...n.traces];
+  function showNote(n, instant) {
+    n.g.classList.add('on'); n.traces.forEach(t => t.classList.add('on'));
+    if (instant) { n.label.classList.add('on'); n.label.textContent = n.text; }
+    else setTimeout(() => { n.label.classList.add('on'); typeInto(n.label, n.text, 55); }, 1000);
+  }
+  function playNote(n, delay, fresh) {
+    clearTimeout(n.timer); clearInterval(n.label._t);
+    if (fresh) {   // start it again from an empty page
+      noteEls(n).forEach(el => { el.style.transition = 'none'; });
+      n.g.classList.remove('on'); n.traces.forEach(t => t.classList.remove('on')); n.label.classList.remove('on', 'typing'); n.label.textContent = '';
+      sketch.getBoundingClientRect(); noteEls(n).forEach(el => { el.style.transition = ''; });
+    }
+    n.timer = setTimeout(() => showNote(n), delay);
+  }
+  // the first time it comes into view: the whole "after" opens, the five notes draw one by one, then a short sweep to the "before"
+  new IntersectionObserver(([e], o) => {
+    if (!e.isIntersecting) return; o.disconnect();
+    if (reduce) { notes.forEach(n => showNote(n, true)); return; }
+    if (!baTouched) { bt = 100; baRun(); }
+    notes.forEach((n, i) => playNote(n, 400 + i * 1150));
+    [].forEach(([t, v]) => setTimeout(() => { if (!baTouched) { bt = v; baRun(); } }, t));
+  }, { threshold: .45 }).observe(ba);
+
+  /* the explanations under the photo are typed in when they come into view (the full text keeps its place while it is typed) */
+  function typeKeep(el, speed, delay) {
+    const full = el.textContent; el.textContent = '';
+    const shown = document.createElement('span'), rest = document.createElement('span');
+    rest.className = 'ghost'; rest.textContent = full; el.append(shown, rest);
+    setTimeout(() => {
+      shown.classList.add('typing'); let i = 0;
+      const t = setInterval(() => { i = Math.min(full.length, i + 1); shown.textContent = full.slice(0, i); rest.textContent = full.slice(i); if (i >= full.length) { clearInterval(t); setTimeout(() => shown.classList.remove('typing'), 600); } }, speed);
+    }, delay);
+    return full.length * speed;
+  }
+  const baList = document.getElementById('ba-notes');
+  if (!reduce) new IntersectionObserver(([e], o) => {
+    if (!e.isIntersecting) return; o.disconnect();
+    [...baList.children].forEach((li, i) => { const d = 250 + i * 420, h = li.querySelector('h3'); const th = typeKeep(h, 38, d); typeKeep(li.querySelector('p'), 13, d + th + 150); });
+  }, { threshold: .3 }).observe(baList);
+
+  // the explanations: pointing at one opens the whole "after" photo and draws its note again
+  const baItems = [...document.querySelectorAll('#ba-notes li')];
+  let bSaved = null;
+  const baFocus = li => {
+    baItems.forEach(x => x.classList.toggle('on', x === li));
+    if (li) { if (bSaved === null) bSaved = bt; ba.dataset.focus = li.dataset.n; bt = 100; if (!reduce) playNote(notes[li.dataset.n - 1], 80, true); }
+    else { delete ba.dataset.focus; if (bSaved !== null) bt = bSaved; bSaved = null; }
+    baTouched = true; baRun();
+  };
+  baItems.forEach(li => {
+    li.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') baFocus(li); });
+    li.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') baFocus(null); });
+    li.addEventListener('click', () => baFocus(li.classList.contains('on') ? null : li));
+  });
+
+  /* ===== giant words that move sideways with the scroll ===== */
+  const brows = [...document.querySelectorAll('[data-band]')];
+  function bandsFrame(vh) {
+    return;   // the big words stay still
+    brows.forEach(b => { const r = b.parentElement.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return; const c = r.top + r.height / 2 - vh / 2; b.style.transform = `translate3d(${(c * .5 * +b.dataset.band).toFixed(1)}px, 0, 0)`; });
+  }
+
+  /* ===== ABOUT: the portrait opens up as you arrive ===== */
+  const aframe = document.getElementById('aframe'), aimg = aframe.querySelector('img');
+  function aboutFrame(vh) {
+    const r = aframe.getBoundingClientRect(); if (r.bottom < 0 || r.top > vh) return;
+    const p = 1;
+    aframe.style.setProperty('--ci', `${((1 - easeOut(p)) * 14).toFixed(2)}%`);
+    if (false) aimg.style.transform = `translateY(${((r.top + r.height / 2 - vh / 2) * -.07).toFixed(1)}px)`;
+  }
+
+  /* ===== SOCIAL: the curved wall glides softly after the mouse ===== */
+  const social = document.getElementById('social'), curve = document.getElementById('curve'), rcs = [...curve.querySelectorAll('.rc')];
+  const n = rcs.length;
+  let cIdx = 0, cTarget = 0, cCur = 0, active = -1, curveVisible = false, curRunning = false, cLast = 0;
+  function curveFrame(now) {
+    const dt = Math.min(3, (now - (cLast || now)) / 16.7 || 1); cLast = now;
+    cIdx += (cTarget - cIdx) * (reduce ? 1 : 1 - Math.pow(1 - .06, dt));
+    cCur += (cIdx - cCur) * (reduce ? 1 : 1 - Math.pow(1 - .1, dt));
+    const m = mob(), step = m ? 76 : 86, depth = m ? 60 : 70, ang = m ? 10 : 7;
+    rcs.forEach((c, k) => {
+      let d = k - cCur; d = ((d % n) + n) % n; if (d > n / 2) d -= n;
+      const ad = Math.abs(d);
+      c.style.transform = `translateX(${(-d * step).toFixed(2)}%) translateZ(${(-ad * depth).toFixed(1)}px) rotateY(${(d * ang).toFixed(2)}deg) scale(${(1 - Math.min(ad, 3) * .04).toFixed(4)})`;
+      c.style.zIndex = 100 - Math.round(ad * 10); c.style.opacity = ad > 3.4 ? 0 : (1 - ad * .14).toFixed(3);
+    });
+    const i = ((Math.round(cCur) % n) + n) % n;
+    if (i !== active && Math.abs(cTarget - cCur) < .35) { active = i; rcs.forEach((c, k) => { const v = c.querySelector('video'); if (k === i && curveVisible && !reduce) v.play().catch(() => {}); else v.pause(); }); }
+    if (Math.abs(cTarget - cCur) > .001) requestAnimationFrame(curveFrame); else { curRunning = false; cLast = 0; }
+  }
+  const run = () => { if (!curRunning) { curRunning = true; requestAnimationFrame(curveFrame); } };
+  let base = 0;
+  social.addEventListener('pointermove', e => {
+    if (e.pointerType === 'touch') return;
+    const r = social.getBoundingClientRect(), x = clamp01((e.clientX - r.left - r.width * .1) / (r.width * .8));
+    cTarget = base - (x - .5) * (n - 1); run();
+  });
+  rcs.forEach((c, k) => c.addEventListener('click', () => { let d = k - (((Math.round(cCur) % n) + n) % n); if (d > n / 2) d -= n; if (d < -n / 2) d += n; base += d; cTarget += d; run(); }));
+  let sw = null;
+  curve.addEventListener('pointerdown', e => { if (e.pointerType !== 'mouse') sw = { x: e.clientX }; });
+  addEventListener('pointermove', e => { if (!sw) return; const dx = e.clientX - sw.x; if (Math.abs(dx) > 40) { cTarget += dx > 0 ? -1 : 1; run(); sw = null; } });
+  addEventListener('pointerup', () => { sw = null; });
+  new IntersectionObserver(([e]) => { curveVisible = e.isIntersecting; active = -1; run(); }, { threshold: .3 }).observe(curve);
+  curveFrame(performance.now());
+
+  /* ===== TRACKS: the panel under the mouse opens by itself (no click needed) ===== */
+  const pnls = [...document.querySelectorAll('.pnl')];
+  let pOpen = null;
+  const openP = p => { if (p === pOpen) return; pOpen = p; pnls.forEach(x => { x.classList.toggle('on', x === p); x.setAttribute('aria-expanded', x === p); }); };
+  pnls.forEach(p => {
+    const hov = e => { if (e.pointerType !== 'touch') openP(p); };
+    p.addEventListener('pointerenter', hov); p.addEventListener('pointermove', hov);
+    p.addEventListener('click', () => openP(p)); p.addEventListener('focusin', () => openP(p));
+    p.addEventListener('keydown', e => { if ((e.key === 'Enter' || e.key === ' ') && e.target === p) { e.preventDefault(); openP(p); } });
+  });
+  openP(pnls[0]);
+
+  /* ===== REVIEWS: they change by themselves; each quote shows a home from Sara's projects =====
+     (sample quotes: replace with real reviews before going live) */
+  const REVIEWS = [
+    ['img/sp-dining.jpg', 'שרה ראתה במטבח שלנו דברים שאנחנו לא ראינו. התכנון חסך לנו טעות יקרה בחשמל עוד לפני שהתחלנו.', 'משפחת א. · קריית גת'],
+    ['img/sp-library2.jpg', 'הגענו עם הרבה חלומות ותקציב מוגבל. יצאנו עם פרויקט שמרגיש בדיוק כמו שלנו.', 'משפחת ב. · אשקלון'],
+    ['img/sp-bath.jpg', 'הפיקוח בשטח היה שווה כל שקל. הקבלן ידע שמישהו בודק כל פרט.', 'משפחת ג. · בית שמש'],
+    ['img/sp-kitchen.jpg', 'המטבח הכשר שלנו סוף סוף עובד: שני כיורים, שני תנורים, ואף אחד לא מתבלבל.', 'משפחת ד. · קריית מלאכי'],
+    ['img/sp-library.jpg', 'היא הקשיבה לכל אחד מבני המשפחה, גם לילדים. כל אחד מרגיש שהפרויקט תוכנן בשבילו.', 'משפחת ה. · נתיבות'],
+    ['img/pr-kitchen3.jpg', 'שקיפות מלאה מהיום הראשון. ידענו בדיוק מה נקבל ומתי.', 'משפחת ו. · כרמי גת']
+  ];
+  const qphoto = document.getElementById('qphoto'), qtext = document.getElementById('qtext'), qstage = document.querySelector('.qstage'), qthumbs = document.getElementById('qthumbs');
+  const qimgs = REVIEWS.map(([src], i) => { const im = new Image(); im.src = src; im.alt = ''; if (!i) im.classList.add('on'); qphoto.append(im); return im; });
+  let q = 0;
+  // each review is a thin strip with the family name written along it; the open one widens and shows the home
+  const tbtns = REVIEWS.map(([src, , who], i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', `המלצה ${i + 1} מתוך ${REVIEWS.length}: ${who}`);
+    b.style.setProperty('--img', `url('${src}')`);
+    const name = who.split('·')[0].trim();
+    b.innerHTML = `<span class="vt" aria-hidden="true">${name}</span><span class="lb">${who}</span><i><span></span></i>`;
+    b.addEventListener('click', () => showQ(i));
+    b.querySelector('i span').addEventListener('animationend', () => showQ(q + 1));
+    qthumbs.append(b); return b;
+  });
+  function showQ(i, instant) {
+    q = (i + REVIEWS.length) % REVIEWS.length;
+    qimgs.forEach((im, k) => im.classList.toggle('on', k === q));
+    tbtns.forEach(b => b.classList.remove('on')); void qthumbs.offsetWidth; tbtns[q].classList.add('on');
+    const put = () => { document.getElementById('q-text').textContent = `״${REVIEWS[q][1]}״`; document.getElementById('q-who').textContent = REVIEWS[q][2]; document.getElementById('q-count').textContent = `0${q + 1} / 0${REVIEWS.length}`; qtext.classList.remove('swap'); };
+    if (instant || reduce) put(); else { qtext.classList.add('swap'); setTimeout(put, 450); }
+  }
+  let qVisible = false, qHover = false;
+  const qPlay = () => qstage.classList.toggle('playing', qVisible && !qHover && !reduce);
+  qstage.addEventListener('pointerenter', () => { qHover = true; qPlay(); });
+  qstage.addEventListener('pointerleave', () => { qHover = false; qPlay(); });
+  new IntersectionObserver(([e]) => { qVisible = e.isIntersecting; qPlay(); }, { threshold: .3 }).observe(qstage);
+  showQ(0, true);
+
+  /* ===== one loop for everything that follows the scroll ===== */
+  function loop(now) {
+    if (lenis) lenis.raf(now);
+    const vh = innerHeight;
+    heroFrame(now); progFrame(); storyFrame(vh); procFrame(vh); filmsFrame(now); bandsFrame(vh); aboutFrame(vh); hlFrame(vh);
+    header.classList.toggle('scrolled', scrollY > 30); barFrame();
+    requestAnimationFrame(loop);
+  }
+  addEventListener('resize', () => { procSize(); sizeClip(); });
+  procSize(); addEventListener('load', procSize);
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
